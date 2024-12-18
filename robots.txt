@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://warpedwood.github.io/sitemap.xml
