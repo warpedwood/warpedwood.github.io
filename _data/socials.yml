@@ -7,11 +7,11 @@ work_url: https://www.sciencespo.fr/ceri/fr/users/pablobarnierkhawam.html
 orcid_id: 0000-0002-7462-5551
 scholar_userid: rlHuDUoAAAAJ # your Google Scholar ID
 zotero_username: pablobarnierkhawam
-rss_icon: true # set to true to show the RSS icon
 linkedin_username: pablo-barnier-khawam-049990306
 mastodon_username: mamot.fr/@warped_wood
-bluesky_url: pablobarnierkhawam.fr
-github_username: warpedwood
+bluesky_url: https://bsky.app/profile/pablobarnierkhawam.fr
+# github_username: warpedwood
+# rss_icon: true # set to true to show the RSS icon
 # acm_id: # your dl.acm.org/profile/id
 # blogger_url: # your blogger URL
 # dblp_url: # your DBLP profile url

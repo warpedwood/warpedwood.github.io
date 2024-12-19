@@ -19,6 +19,4 @@ social: true # includes social icons at the bottom of the page
 
 My research focuses on the right to self-determination in Bolivia and Chile and its transformation from a right to the State to a right to autonomy since the 1970s, thanks to its claim by the Non-Aligned Movement and its appropriation by indigenous peoples. For more details, see [research](_pages/en/projects.md).
 
-I earned my [Ph.D](https://theses.hal.science/tel-04124332) in political
-science, major international relations, from Sciences Po, under the supervision
-of Prof. Thierry Balzacq.
+I earned my [Ph.D](https://theses.hal.science/tel-04124332) in political science, major international relations, from Sciences Po, under the supervision of Prof. Thierry Balzacq.
