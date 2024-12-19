@@ -2,15 +2,22 @@
 # the commented lines are the default social media links supported by the template
 # the socials will be displayed in the order they are defined here
 
+email: pablo.barnierkhawam@sciencespo.fr # your email address
+work_url: https://www.sciencespo.fr/ceri/fr/users/pablobarnierkhawam.html
+orcid_id: 0000-0002-7462-5551
+scholar_userid: rlHuDUoAAAAJ # your Google Scholar ID
+zotero_username: pablobarnierkhawam
+rss_icon: true # set to true to show the RSS icon
+linkedin_username: pablo-barnier-khawam-049990306
+mastodon_username: mamot.fr/@warped_wood
+bluesky_url: pablobarnierkhawam.fr
+github_username: warpedwood
 # acm_id: # your dl.acm.org/profile/id
 # blogger_url: # your blogger URL
-bluesky_url: pablobarnierkhawam.fr
 # dblp_url: # your DBLP profile url
 # discord_id: # your discord id (18-digit unique numerical identifier)
-email: pablo.barnierkhawam@sciencespo.fr # your email address
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
-github_username: warpedwood
 # gitlab_username: # your GitLab user name
 # ieee_id: # your ieeexplore.ieee.org/author/id
 # inspirehep_id: 1010907 # Inspire HEP author ID
@@ -20,17 +27,12 @@ github_username: warpedwood
 # lastfm_id: # your lastfm id
 # lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 # leetcode_id: # your LeetCode id
-linkedin_username: pablo-barnier-khawam-049990306
-mastodon_username: mamot.fr/@warped_wood
 # medium_username: # your Medium username
-orcid_id: 0000-0002-7462-5551
 # osf_id: # your OSF ID
 # pinterest_id: # your pinterest id
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
 # research_gate_profile: # your profile on ResearchGate
-rss_icon: true # set to true to show the RSS icon
-scholar_userid: rlHuDUoAAAAJ # your Google Scholar ID
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
 # spotify_id: # your spotify id
@@ -41,10 +43,8 @@ scholar_userid: rlHuDUoAAAAJ # your Google Scholar ID
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 # wikidata_id: # your wikidata id
 # wikipedia_id: # your wikipedia id (Case sensitive)
-work_url: https://www.sciencespo.fr/ceri/fr/users/pablobarnierkhawam.html
 # x_username: # your X handle
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
-zotero_username: pablobarnierkhawam
 # custom_social: # can be any name here other than the ones already defined above
   # logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
   # title: Custom Social
