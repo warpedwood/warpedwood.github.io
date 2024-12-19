@@ -3,6 +3,7 @@ page_id: publications
 layout: page
 permalink: /publications/
 title: publications
+sortby: true        # true: Sort by types | false: Sort by years
 description: 
 nav: true
 nav_order: 1
@@ -11,7 +12,6 @@ nav_order: 1
 <!-- _pages/publications.md -->
 
 <!-- Bibsearch Feature -->
-
 {% include bib_search.liquid %}
 
 <div class="publications">
@@ -19,3 +19,4 @@ nav_order: 1
 {% bibliography %}
 
 </div>
+

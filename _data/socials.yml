@@ -2,14 +2,15 @@
 # the commented lines are the default social media links supported by the template
 # the socials will be displayed in the order they are defined here
 
-email: pablo.barnierkhawam@sciencespo.fr # your email address
+email: pablo.barnierkhawam@sciencespo.fr
 work_url: https://www.sciencespo.fr/ceri/fr/users/pablobarnierkhawam.html
 orcid_id: 0000-0002-7462-5551
-scholar_userid: rlHuDUoAAAAJ # your Google Scholar ID
+scholar_userid: rlHuDUoAAAAJ
 zotero_username: pablobarnierkhawam
 linkedin_username: pablo-barnier-khawam-049990306
-mastodon_username: mamot.fr/@warped_wood
 bluesky_url: https://bsky.app/profile/pablobarnierkhawam.fr
+mastodon_username: mamot.fr/@warped_wood
+# hal_username: pablo-barnier-khawam
 # github_username: warpedwood
 # rss_icon: true # set to true to show the RSS icon
 # acm_id: # your dl.acm.org/profile/id
