@@ -53,7 +53,7 @@ cv:
   score: Score
   skills: Compétences
   startDate: Date de début
-  studyType: Type d'étude
+  studyType: Type étude
   summary: Résumé
   table_of_contents: Sommaire
   title: Titre
@@ -95,7 +95,7 @@ news: nouvelles
 newsletter:
   back: Retour
   error: "Oups ! quelque chose s'est mal passé, veuillez réessayer."
-  subscribe: s'inscrire
+  subscribe: inscription
   subscribed: "Vous vous êtes inscrit avec succès à la lettre d'information."
   subscribe_to_receive: "S'abonner pour être informé des prochains articles:"
   too_many_signups: "Trop d'inscriptions, veuillez réessayer bientôt"
@@ -113,19 +113,19 @@ related_posts:
   title: Avez-vous apprécié la lecture de cet article ?
 search:
   dark_theme:
-    description: Modifier le thème du site pour qu'il soit sombre
-    title: Modifier le thème pour qu'il soit sombre
+    description: Thème sombre
+    title: Thème sombre
   dropdown: Autres options
   email: Envoyer un mail
   footer:
     close: fermer
     navigate: pour naviguer
-    parent: reculer d'un niveau
+    parent: étrocéder
     select: pour sélectionner
   languages: Langages
   light_theme:
-    description: Modifier le thème du site pour qu'il soit clair
-    title: Modifier le thème pour qu'il soit clair
+    description: Thème clair
+    title: Thème clair
   navigation: Menu de navigation
   news: Nouveautés
   placeholder: Tapez pour lancer la recherche
