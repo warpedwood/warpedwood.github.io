@@ -120,7 +120,7 @@ search:
   footer:
     close: fermer
     navigate: pour naviguer
-    parent: étrocéder
+    parent: rétrocéder
     select: pour sélectionner
   languages: Langages
   light_theme:

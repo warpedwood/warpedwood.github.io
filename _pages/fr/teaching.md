@@ -8,49 +8,47 @@ nav: true
 nav_order: 3
 ---
 
-J'ai enseigné des cours de premier cycle, principalement en science politique et
-en relations internationales, en anglais, en français et en espagnol. J'ai
-également été *teaching assistante* pour des cours de sécurité internationale et de
-théorie démocratique.
+J'ai enseigné des TD, principalement en science politique et en relations internationales, en anglais, en français et en espagnol. J'ai également été **teaching assistant*e* pour des cours de sécurité internationale et de théorie démocratique.
 
 ## Universidad de Chile
 
-- **Política Comparada I** (Spring 2024). One undergraduate seminar, 1<sup>st</sup> year, 48h.
+- **Política Comparada I** (Printemps 2024). CM, 1<sup>ière</sup> année, 48h.
   - [Syllabus](/assets/pdf/en/politica_comparada_programa.pdf)
 
-- **Seminario de Investigación Aplicada** (Spring 2024). One undergraduate
-  seminar, 4<sup>th</sup> year, 48h.
+- **Seminario de Investigación Aplicada** (Printemps 2024). CM, 4<sup>e</sup> année, 48h.
 
 ## Universidad O'Higgins
 
-- **Ciencias Sociales** (Spring 2024). One undergraduate seminar, 2<sup>nd</sup> year, 42h.
+- **Ciencias Sociales** (Printemps 2024). CM, 2<sup>e</sup> année, 42h.
   - [Syllabus](</assets/pdf/en/Planificación Ciencias Sociales.pdf>)
 
 ## Université de Lille
 
-- **Three supervisions of Master thesis** in political science (2023-2024).
+- **Trois supervisions de mémoires de Master** en science politique (2023-2024).
 
-- **Introduction à la politique mondiale** (Autumn 2023). Four undergraduate seminars, 1<sup>st</sup> year, 60h.
+- **Introduction à la politique mondiale** (Automne 2023). Quatre TD, 1<sup>ière</sup> année, 60h.
 
-- **Sociologie politique** (Autumn 2023). Two undergraduate seminars, 2<sup>nd</sup> year, 30h.
+- **Sociologie politique** (Automne 2023). Deux TD, 2<sup>e</sup> année, 30h.
 
 ## Sciences Po
 
-- **Espace mondial: Thinking IR globally** (Autumn 2022 and 2021). Four undergraduate seminars, 2<sup>nd</sup> year, Paris and Reims campus, 144h.
+- **Espace mondial: Thinking IR globally** (Automne 2022 and 2021). Quatre TD, 2<sup>e</sup> année, Paris and Reims campus, 144h.
   - [Syllabus](/assets/pdf/en/UP%2017376_Espace%20mondial_BARNIER-KHAWAM_Syllabus.pdf)
 
-- **Introduction to political science** (Spring 2021). Undergraduate seminar, 1<sup>st</sup> year, Reims campus, 24h.
+- **Introduction to political science** (Printemps 2021). TD, 1<sup>ière</sup> année, Reims campus, 24h.
   - [Syllabus](/assets/pdf/en/Seminar_Syllabus_IPS_Pablo%20Barnier-Khawam_Reims.pdf)
 
-- **Introduction à la science politique** (Spring 2021). Undergraduate seminar, 1<sup>st</sup> year, 24h.
+- **Introduction à la science politique** (Printemps 2021). TD, 1<sup>ière</sup> année, 24h.
   - [Syllabus](/assets/pdf/en/Barnier-Khawam_Syllabus_Intro%20Sc%20Po_Paris.pdf)
 
-- Teaching assistant for the course **International Security: Theories and Cases** (Autumn 2020) by Professor Thierry Balzacq, 3rd year, Sciences Po.
+- *Teaching assistant* pour le cours **International Security: Theories and
+  Cases** (Automne 2020) par le professeur Thierry Balzacq, 3<sup>e</sup> année, Sciences Po.
 
-- **Théorie des relations internationales** (Spring 2019). Undergraduate seminar, 2<sup>nd</sup> year, 24h.
+- **Théorie des relations internationales** (Printemps 2019). TD, 2<sup>e</sup> année, 24h.
   - [Syllabus](/assets/pdf/en/Barnier-Khawam_Syllabus_Th%C3%A9ories%20des%20RI.pdf)
 
-- Teaching assistant for the course **Érosion démocratique** (Spring 2019) by Professor Nicolas Sauger, 2<sup>nd</sup> year, Sciences Po.
+- *Teaching assistant* pour le cours **Érosion démocratique** (Printemps 2019) par
+ le professeur Nicolas Sauger, 2<sup>e</sup> année, Sciences Po.
 
-- **War, Peace and the Sovereign State: Political Thought from Machiavelli to Kant** (Autumn 2018). Undergraduate seminar, 2<sup>nd</sup> year, 24h.
+- **War, Peace and the Sovereign State: Political Thought from Machiavelli to Kant** (Automne 2018). TD, 2<sup>e</sup> année, 24h.
   - [Syllabus](/assets/pdf/en/Barnier-Khawam%20-%20Syllabus%20-%20WPSS.pdf)
