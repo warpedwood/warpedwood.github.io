@@ -104,7 +104,7 @@ no_news: Sin noticias por el momento...
 pagination:
   page: Página
 post:
-  created_in: Creado en
+  created_in: Creado el
   created_by: por
   last_updated: Última actualización
 references: Referencias

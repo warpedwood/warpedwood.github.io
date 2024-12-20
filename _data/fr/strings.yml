@@ -104,12 +104,12 @@ no_news: Pas de nouvelles pour le moment...
 pagination:
   page: Page
 post:
-  created_in: Créé en
+  created_in: Créé le
   created_by: par
   last_updated: Dernière mise à jour le
 references: Références
 related_posts:
-  description: "Voici quelques articles similaires que vous pourriez lire:"
+  description: "Voici quelques articles similaires que vous pourriez lire :"
   title: Avez-vous apprécié la lecture de cet article ?
 search:
   dark_theme:
