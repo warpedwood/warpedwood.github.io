@@ -55,4 +55,4 @@ en ese campo en Francia y ahora está prosperando. Se ha creado una
  Zotero compartida para acceder a las referencias debatidas durante el
 seminario, y las sesiones anteriores pueden escucharse en podcast en la [página
 web](https://www.sciencespo.fr/ceri/fr/content/seminaire-sur-les-approches-postcoloniales-sap-1)
-del seminario.
+del seminario y en la sección [blog](/projects/).

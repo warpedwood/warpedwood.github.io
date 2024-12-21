@@ -56,4 +56,6 @@ scholars around a topic where no academic space to discuss of its progress was
 previously available. This Seminar was thus a pioneer in that field in
 France and is now thriving. A Zotero shared [library](https://www.zotero.org/groups/2212324/colonialisme_et_postcolonialisme) was built to access the
 references discussed during the seminar and previous session can be listened in
-podcast on the Seminar's [webpage](https://www.sciencespo.fr/ceri/fr/content/seminaire-sur-les-approches-postcoloniales-sap-1).
+podcast on the Seminar's
+[webpage](https://www.sciencespo.fr/ceri/fr/content/seminaire-sur-les-approches-postcoloniales-sap-1)
+and in the [blog](/blog/) section.

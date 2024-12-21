@@ -64,4 +64,4 @@ partagée Zotero a été créée pour accéder aux références discutées penda
 séminaire et les sessions précédentes peuvent être écoutées en podcast sur la
 [page
 web](https://www.sciencespo.fr/ceri/fr/content/seminaire-sur-les-approches-postcoloniales-sap-1)
-du séminaire.
+du séminaire et dans l'onglet [blog](/projects/).
