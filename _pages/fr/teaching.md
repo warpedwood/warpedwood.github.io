@@ -8,7 +8,7 @@ nav: true
 nav_order: 3
 ---
 
-J'ai enseigné des TD, principalement en science politique et en relations internationales, en anglais, en français et en espagnol. J'ai également été **teaching assistant*e* pour des cours de sécurité internationale et de théorie démocratique.
+J'ai enseigné des TD, principalement en science politique et en relations internationales, en anglais, en français et en espagnol. J'ai également été *teaching assistant* pour des cours de sécurité internationale et de théorie démocratique.
 
 ## Universidad de Chile
 
