@@ -1,0 +1,140 @@
+archive_category: archivo de posts de esta categoría
+archive_tag: un archivo de posts con esta etiqueta
+archive_year: un archivo de posts de este año
+blog:
+  navigation_title: blog
+categories:
+  fun: placer
+  work: trabajo
+citation:
+  bibtex: "o como cita en BibTeX:"
+  introduction: "Si le ha resultado útil, menciónelo:"
+contact_note: Incluso puede añadir una pequeña nota indicando la mejor forma de ponerse en contacto con usted.
+cv:
+  address: Dirección
+  area: Zona
+  awarder: Premiado por
+  awards: Premios
+  basics: Información general
+  certificates: Certificados
+  city: Ciudad
+  countryCode: Código del país
+  courses: Clases
+  date: Datos
+  education: Educación
+  email: Correo
+  endDate: Fecha final
+  fluency: Nivel
+  highlights: Puntos fuertes
+  image: Imagén
+  institution: Institución
+  interests: Intereses
+  issuer: Editorial
+  keywords: Palabras clave
+  label: Título
+  language: Idioma
+  languages: Idiomas
+  level: Nivel
+  location: Ubicación
+  name: Apellido
+  network: Red
+  organization: Organisazión
+  phone: Teléfono
+  position: Posición
+  postalCode: Código postal
+  profiles: Perfil
+  projects: Proyectos
+  publications: Publicaciones
+  publisher: Editorial
+  reference: Referencia
+  references: Referencias
+  region: Región
+  releaseDate: Fecha de publicación
+  score: Puntuación
+  skills: Habilidades
+  startDate: Fecha de inicio
+  studyType: Tipo de estudio
+  summary: Resumen
+  table_of_contents: Contenido
+  title: Título
+  url: Url
+  username: Nombre de usuario
+  volunteer: Voluntario
+  work: Trabajo
+footer_text: > # the ">" symbol means to ignore newlines until "titles:"
+  Desarrollado en <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> con el tema <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
+latest_posts: últimas entradas
+months:
+  long:
+    january: Enero
+    february: Febrero
+    march: Marzo
+    april: Abril
+    may: Mayo
+    june: Junio
+    july: Julio
+    august: Agosto
+    september: Septiembre
+    october: Octubre
+    november: Noviembre
+    december: Diciembre
+  short:
+    january: Ene
+    february: Feb
+    march: Mar
+    april: Abr
+    may: Mayo
+    june: Jun
+    july: Jul
+    august: Ago
+    september: Sep
+    october: Oct
+    november: Nov
+    december: Dic
+news: noticias
+newsletter:
+  back: Volver
+  error: "Algo ha ido mal, inténtelo de nuevo."
+  subscribe: regístrese
+  subscribed: "Se ha suscrito correctamente al boletín."
+  subscribe_to_receive: "Suscríbase para recibir futuros artículos:"
+  too_many_signups: "Demasiados registros, por favor inténtelo de nuevo pronto"
+  wait: "Espere, por favor..."
+no_news: Sin noticias por el momento...
+pagination:
+  page: Página
+post:
+  created_in: Creado el
+  created_by: por
+  last_updated: Última actualización
+references: Referencias
+related_posts:
+  description: "He aquí algunos artículos similares que quizá le interese leer:"
+  title: ¿Le ha gustado leer este artículo?
+search:
+  dark_theme:
+    description: Cambiar el tema del sitio para que sea oscuro
+    title: Cambiar el tema a oscuro
+  dropdown: Otras opciones
+  email: Enviar un e-mail
+  footer:
+    close: cerrar
+    navigate: para navegar
+    parent: retroceder un nivel
+    select: para seleccionar
+  languages: Idiomas
+  light_theme:
+    description: Cambiar el tema del sitio para que sea claro
+    title: Modificar el tema para que sea claro
+  navigation: Menú de navegación
+  news: Noticias
+  placeholder: Escriba para iniciar la búsqueda
+  posts: Posts
+  projects: Proyectos
+  socials: Redes sociales
+  system_theme:
+    description: Sustituir el tema del sitio por el tema por defecto del sistema
+    title: Utiliza el tema por defecto del sistema
+  theme: Tema
+selected_publications: publicaciones seleccionadas
+site_description: Un tema sencillo para académicos. Basado en el diseño de [*folio](https://github.com/bogoli/-folio).

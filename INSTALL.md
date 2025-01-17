@@ -13,7 +13,6 @@
     - [For project pages](#for-project-pages)
     - [Enabling automatic deployment](#enabling-automatic-deployment)
     - [Manual deployment to GitHub Pages](#manual-deployment-to-github-pages)
-    - [Deploy on Netlify](#deploy-on-netlify)
     - [Deployment to another hosting server (non GitHub Pages)](#deployment-to-another-hosting-server-non-github-pages)
     - [Deployment to a separate repository (advanced users only)](#deployment-to-a-separate-repository-advanced-users-only)
   - [Upgrading from a previous version](#upgrading-from-a-previous-version)
@@ -211,7 +210,7 @@ If you installed **multi-language-al-folio** as described above, you can manuall
 # Assuming the current directory is <your-repo-name>
 $ git remote add upstream https://github.com/george-gca/multi-language-al-folio.git
 $ git fetch upstream
-$ git rebase v1.13.4
+$ git rebase v0.11.0
 ```
 
 If you have extensively customized a previous version, it might be trickier to upgrade.
