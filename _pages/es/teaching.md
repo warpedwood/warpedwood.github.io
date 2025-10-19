@@ -3,12 +3,17 @@ page_id: teaching
 layout: page
 permalink: /teaching/
 title: clases
-description: 
+description:
 nav: true
 nav_order: 3
 ---
 
 He impartido cursos de licenciatura, principalmente en ciencias políticas y relaciones internacionales, en inglés, francés y español. También he sido ayudante de cátedra en cursos sobre seguridad internacional y teoría democrática.
+
+## Institut catholique de Paris
+
+- **Géopolitique de l'Amérique latine** (Otoño 2025). Seminario, Master 1 Géopolitique et relations internationales, 15h.
+  - [Syllabus](/assets/pdf/en/syllabus_gal.pdf)
 
 ## Universidad de Chile
 

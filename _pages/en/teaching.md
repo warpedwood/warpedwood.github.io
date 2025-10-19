@@ -3,7 +3,7 @@ page_id: teaching
 layout: page
 permalink: /teaching/
 title: teaching
-description: 
+description:
 nav: true
 nav_order: 3
 ---
@@ -11,6 +11,11 @@ nav_order: 3
 I have taught undergraduate courses mainly in political science and
 international relations, in English, French and Spanish. I also served as a teaching
 assistant for courses in international security and democratic theory.
+
+## Institut catholique de Paris
+
+- **Géopolitique de l'Amérique latine** (Autumn 2025). One graduate seminar, Master 1 Géopolitique et relations internationales, 15h.
+  - [Syllabus](/assets/pdf/en/syllabus_gal.pdf)
 
 ## Universidad de Chile
 

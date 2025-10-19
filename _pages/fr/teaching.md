@@ -3,12 +3,17 @@ page_id: teaching
 layout: page
 permalink: /teaching/
 title: cours
-description: 
+description:
 nav: true
 nav_order: 3
 ---
 
 J'ai enseigné des TD, principalement en science politique et en relations internationales, en anglais, en français et en espagnol. J'ai également été *teaching assistant* pour des cours de sécurité internationale et de théorie démocratique.
+
+## Institut catholique de Paris
+
+- **Géopolitique de l'Amérique latine** (Automne 2025). CM, Master 1 Géopolitique et relations internationales, 15h.
+  - [Syllabus](/assets/pdf/en/syllabus_gal.pdf)
 
 ## Universidad de Chile
 
