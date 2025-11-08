@@ -7,7 +7,7 @@ first_name: Pablo
 middle_name:
 last_name: Barnier-Khawam
 keywords: # add your own keywords or leave empty
-icon: 🌐 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://warpedwood.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
