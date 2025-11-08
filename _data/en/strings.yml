@@ -1,6 +1,20 @@
-archive_category: an archive of posts in this category
-archive_tag: an archive of posts with this tag
-archive_year: an archive of posts from this year
+archive:
+  prefix: an archive of
+  category_suffix: in this category
+  tag_suffix: with this tag
+  year_suffix: from this year
+bibliography:
+  abstract: Abs
+  awarded: Awarded
+  blog: Blog
+  book_prefix: In
+  code: Code
+  last_author_prefix: and
+  poster: Poster
+  slides: Slides
+  supp: Supp
+  video: Video
+  website: Website
 blog:
   navigation_title: blog
 categories:
@@ -9,7 +23,10 @@ categories:
 citation:
   bibtex: "or as a BibTeX entry:"
   introduction: "If you found this useful, please cite this as:"
-contact_note: 
+collections:
+  books: books
+  posts: posts
+contact_note: You can even add a little note about which of these is the best way to reach you.
 cv:
   address: Address
   area: Area
