@@ -5,7 +5,7 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 5
-description: 
+description:
 ---
 
-<iframe src="/assets/pdf/es/cv_es.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
+<iframe src="/assets/pdf/en/cv_en.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
