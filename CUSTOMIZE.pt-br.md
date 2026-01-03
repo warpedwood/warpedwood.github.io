@@ -53,6 +53,169 @@ O arquivo de configuração [\_config.yml](_config.yml) contém as principais co
 
 Todas as alterações feitas neste arquivo só são visíveis após você reconstruir o site. Isso significa que você precisará executar novamente `bundle exec jekyll serve` se estiver rodando o site localmente ou enviar (push) suas alterações para o GitHub se estiver utilizando o GitHub Pages. Todas as outras alterações são visíveis imediatamente, bastando atualizar a página.
 
+## Agente de Personalização GitHub Copilot
+
+Este repositório inclui um agente GitHub Copilot especializado (`.github/agents/customize.agent.md`) projetado para ajudá-lo a personalizar seu site al-folio. O agente funciona como um assistente especialista que pode:
+
+- Orientá-lo através de tarefas comuns de personalização passo a passo
+- Modificar arquivos de configuração, adicionar conteúdo e atualizar seu site
+- Explicar conceitos técnicos em linguagem simples (especialmente útil se você não estiver familiarizado com Jekyll ou desenvolvimento web)
+- Aplicar mudanças diretamente aos seus arquivos de repositório
+- Responder perguntas sobre como personalizar recursos específicos
+
+### O que o Agente Pode Ajudar
+
+O agente de personalização pode auxiliar em tarefas como:
+
+- Alterar informações básicas do site (título, nome do autor, detalhes de contato)
+- Atualizar seu CV ou currículo
+- Adicionar e gerenciar publicações de arquivos BibTeX
+- Criar postagens de blog, projetos e itens de notícias
+- Personalizar cores de tema e estilo
+- Gerenciar links de mídia social
+- Ativar ou desativar recursos em `_config.yml`
+- Adicionar fotos de perfil e outros ativos
+- Resolver problemas de configuração
+
+### Como Usar o Agente
+
+Para usar o agente de personalização:
+
+1. Certifique-se de ter uma assinatura de [GitHub Copilot](https://github.com/features/copilot)
+2. Abra seu repositório em um editor com suporte ao GitHub Copilot (como VS Code com a extensão GitHub Copilot)
+3. Interaja com GitHub Copilot e faça perguntas ou solicite alterações. Para mais informações, consulte [Usando agentes customizados no seu IDE](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents#using-custom-agents-in-your-ide)
+4. O agente o guiará através do processo de personalização e pode fazer alterações diretamente em seus arquivos
+
+Por exemplo, você pode perguntar:
+
+- "Como faço para alterar a cor do tema do meu site para azul?"
+- "Ajude-me a adicionar uma nova postagem de blog sobre minha pesquisa"
+- "Atualize minhas informações de perfil com meu novo email da universidade"
+- "Como adiciono uma publicação ao meu site?"
+
+O agente é projetado para ser paciente e prestativo, explicando cada etapa claramente para que você entenda o que está sendo alterado e por quê.
+
+### Importante: Verifique a Saída do Agente
+
+**O agente de personalização pode cometer erros ou produzir informações incorretas.** Sempre revise e verifique as sugestões e alterações do agente antes de aplicá-las ao seu repositório:
+
+- **Revise todas as alterações** – Antes de aplicar qualquer modificação, leia cuidadosamente o que o agente sugere e certifique-se de que faz sentido para suas necessidades
+- **Teste localmente primeiro** – Antes de fazer push para o GitHub, teste as alterações localmente usando Docker ou instalação nativa (veja as instruções de instalação)
+- **Verifique a sintaxe** – Certifique-se de que quaisquer arquivos YAML, Markdown ou BibTeX tenham sintaxe correta. A sintaxe incorreta pode quebrar seu site
+- **Verifique a configuração** – Se o agente modificar `_config.yml` ou outros arquivos de configuração, verifique se as alterações estão alinhadas com suas intenções
+- **Visualize em seu site** – Execute seu site localmente e navegue por ele para garantir que tudo seja exibido corretamente e funcione conforme esperado
+- **Não aplique alterações cegamente** – Entenda o que está sendo alterado e por quê antes de fazer commit em seu repositório
+
+**Cenários de exemplo onde a verificação é importante:**
+
+- Se o agente sugere uma entrada BibTeX, verifique se a sintaxe corresponde às entradas existentes em seu arquivo `_bibliography/papers.bib`
+- Se o agente modifica seu `_config.yml`, verifique se a indentação está correta (YAML é muito sensível ao espaçamento)
+- Se o agente cria uma nova postagem ou página de blog, verifique se o front matter (os metadados no topo) está correto
+- Se o agente sugere alterações em cores de tema ou estilo, visualize seu site localmente para garantir que as alterações pareçam conforme planejado
+
+> **Nota:** O agente de personalização requer que o GitHub Copilot esteja habilitado. Para mais informações sobre o GitHub Copilot e seus recursos, veja a [documentação do GitHub Copilot](https://docs.github.com/en/copilot).
+
+## Entendendo a Base de Código com Code Wiki e DeepWiki
+
+Se você estiver interessado em aprender mais sobre como o al-folio funciona por trás dos panos, ou quiser entender aspectos específicos da base de código para personalização mais profunda, você pode usar Code Wiki e DeepWiki como recursos complementares.
+
+### O que são essas ferramentas?
+
+**Code Wiki** e **DeepWiki** são ferramentas alimentadas por IA que ajudam você a explorar e entender repositórios GitHub através de documentação interativa:
+
+- **Code Wiki** (alimentado por Google Gemini) gera documentação interativa a partir do código do repositório. Você pode navegar pela estrutura do projeto, pesquisar funções ou módulos específicos, visualizar diagramas de arquitetura e entender como diferentes componentes interagem.
+
+- **DeepWiki** fornece uma interface de chat com IA onde você pode fazer perguntas em linguagem natural sobre a base de código, semelhante a ter um engenheiro disponível 24/7. Você pode perguntar como os recursos funcionam, pesquisar padrões de código ou obter explicações de lógica complexa.
+
+### Quando usar essas ferramentas
+
+Use Code Wiki e DeepWiki **apenas depois** de:
+
+- Você ter revisado as seções relevantes neste arquivo `CUSTOMIZE.md`
+- Você ter explorado a seção estrutura do projeto acima
+- Você ter explorado os arquivos de documentação principais (README.md, INSTALL.md, FAQ.md)
+- Você ter verificado a [seção de Q&A das Discussões do GitHub](https://github.com/alshedivat/al-folio/discussions/categories/q-a)
+
+Essas ferramentas são melhor utilizadas para:
+
+- Entender a arquitetura e como diferentes partes da base de código funcionam juntas
+- Encontrar onde a funcionalidade específica é implementada
+- Aprender sobre a estrutura do modelo Jekyll e a sintaxe Liquid usada no tema
+- Explorar como recursos específicos são implementados (por exemplo, como publicações são renderizadas, como a pesquisa funciona, etc.)
+
+**Acesse essas ferramentas:**
+
+- **Code Wiki**: [Code Wiki for al-folio](https://codewiki.google/github.com/george-gca/multi-language-al-folio)
+- **DeepWiki**: [DeepWiki for al-folio](https://deepwiki.com/george-gca/multi-language-al-folio)
+
+## Pilha de Tecnologia
+
+Entender a pilha de tecnologia do al-folio o ajudará a personalizar e estender melhor o tema. Esta seção fornece uma visão geral das principais tecnologias e estruturas usadas no projeto.
+
+### Frontend
+
+- **Markdown**: O conteúdo é escrito em formato Markdown para páginas, postagens de blog e coleções. Isso facilita a criação e manutenção de conteúdo sem se preocupar com HTML.
+- **Templating Liquid**: [Liquid](https://shopify.github.io/liquid/) é usado para geração dinâmica de modelos. Os modelos Liquid são usados nos diretórios `_layouts/` e `_includes/` para definir como seu conteúdo deve ser exibido.
+- **HTML & CSS**: O tema usa HTML5 semântico e CSS moderno para estilo e layout.
+- **SCSS**: As folhas de estilo são escritas em [SCSS (Sass)](https://sass-lang.com/), um pré-processador CSS que fornece variáveis, mixins e funções para estilo mais mantível. Os arquivos SCSS estão localizados em `_sass/` e compilados para CSS durante o processo de construção.
+- **Bootstrap**: [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/) é usado para layout responsivo da grade e componentes de estilo base.
+- **JavaScript**: JavaScript mínimo é usado para recursos interativos como alternância de modo escuro, funcionalidade de pesquisa e renderização dinâmica de conteúdo.
+- **MathJax**: Para renderizar equações matemáticas em formato LaTeX em suas páginas e postagens de blog.
+- **Mermaid**: Para criar diagramas (fluxogramas, diagramas de sequência, etc.) diretamente em Markdown.
+- **Font Awesome, Academicons e Tabler Icons**: Bibliotecas de ícones usadas ao longo do tema para elementos visuais.
+
+### Backend
+
+- **Jekyll 4.x**: [Jekyll](https://jekyllrb.com/) é um gerador de site estático escrito em Ruby que transforma seus arquivos Markdown e modelos em um site estático. O Jekyll é usado para:
+
+  - Converter arquivos Markdown em HTML
+  - Processar modelos Liquid
+  - Gerenciar coleções (postagens, projetos, notícias, livros, etc.)
+  - Gerar arquivos e paginação
+  - Minificar CSS e JavaScript
+
+- **Ruby Gems** (Plugins Jekyll): O projeto usa vários plugins Ruby para estender a funcionalidade do Jekyll:
+
+  - `jekyll-scholar`: Gerencia arquivos de bibliografia (BibTeX) e gera páginas de publicações com citações
+  - `jekyll-archives-v2`: Cria páginas de arquivo para postagens e coleções organizadas por categoria, tag ou data
+  - `jekyll-paginate-v2`: Manipula paginação para postagens de blog e arquivos
+  - `jekyll-feed`: Gera um feed Atom (semelhante a RSS) para seu conteúdo
+  - `jekyll-toc`: Gera automaticamente tabela de conteúdos para páginas com cabeçalhos
+  - `jekyll-jupyter-notebook`: Integra notebooks Jupyter em seu site
+  - `jekyll-tabs`: Adiciona suporte de conteúdo em abas
+  - `jemoji`: Converte abreviações de emoji em imagens de emoji
+  - `jekyll-minifier`: Minifica HTML, CSS e JavaScript para melhor desempenho
+  - `classifier-reborn`: Usado para categorizar e encontrar postagens de blog relacionadas
+  - Outros utilitários: `jekyll-link-attributes`, `jekyll-imagemagick`, `jekyll-twitter-plugin`, `jekyll-get-json` e muito mais
+
+- **Python**: Usado para scripts utilitários como atualizações de citações via Google Scholar (localizado em `bin/`)
+
+### Construção e Implantação
+
+- **GitHub Actions**: Fluxos de trabalho automatizados para construir, testar e implantar seu site. Os fluxos de trabalho estão definidos em `.github/workflows/`:
+
+  - **Deploy**: Constrói e implanta automaticamente seu site no GitHub Pages quando você faz push de alterações para o ramo principal
+  - **Verificação de links**: Valida que todos os links do seu site não estão quebrados
+  - **Formatação de código**: Garante que o código segue o estilo de código Prettier
+  - **Testes de acessibilidade**: Verifica se há problemas de acessibilidade usando Axe
+  - **Lighthouse**: Mede o desempenho do site e as melhores práticas
+  - **Atualizações de citações**: Busca automaticamente contagens de citações do Google Scholar
+
+- **GitHub Pages**: Hospedagem gratuita para seu site estático construído por Jekyll
+- **Docker**: Containerização opcional para desenvolvimento local (fornece um ambiente consistente entre diferentes máquinas)
+- **Prettier**: Formatador de código para arquivos Markdown, YAML e Liquid para manter a formatação consistente
+
+### Pontos-chave de Integração
+
+Entender como essas tecnologias funcionam juntas o ajudará a personalizar o al-folio efetivamente:
+
+1. **Criação de Conteúdo**: Escreva conteúdo em Markdown
+2. **Processamento de Modelo**: O Jekyll processa Markdown através de modelos Liquid
+3. **Estilo**: Os arquivos SCSS são compilados em CSS, com Bootstrap fornecendo o framework de layout responsivo
+4. **Bibliografia**: Os arquivos BibTeX são processados por jekyll-scholar para gerar páginas de publicações
+5. **Geração de Site Estático**: O Jekyll constrói todos os arquivos em HTML estático
+6. **Implantação**: GitHub Actions implanta automaticamente o site construído no GitHub Pages
+
 ## Modificando as informações do CV
 
 Atualmente, existem 2 maneiras diferentes de gerar o conteúdo da página do CV. A primeira utiliza um arquivo JSON localizado em [assets/json/resume_LANG.json](assets/json/resume_en-us.json). Trata-se de um [padrão conhecido](https://jsonresume.org/) para criar um currículo de forma programática. A segunda, atualmente usada como alternativa quando o arquivo JSON não é encontrado, utiliza um arquivo YML localizado em [\_data/LANG/cv.yml](_data/en-us/cv.yml). Essa foi a forma original de criar o conteúdo da página do CV e, por ser mais legível para humanos do que um arquivo JSON, decidimos mantê-la como opção.
@@ -156,7 +319,113 @@ Existem diversas palavras-chave BibTeX personalizadas que você pode utilizar pa
 
 Você pode implementar seus próprios botões editando o arquivo [\_layouts/bib.liquid](_layouts/bib.liquid).
 
-## Alterando a cor do tema
+## Personalizando layout e UI
+
+Você pode personalizar o layout e a interface do usuário em [\_config.yml](_config.yml):
+
+```yaml
+navbar_fixed: true
+footer_fixed: true
+back_to_top: true
+max_width: 930px
+```
+
+- `navbar_fixed`: Quando `true`, a barra de navegação permanece fixa no topo da página ao descer. Quando `false`, ela se move com o conteúdo da página.
+- `footer_fixed`: Quando `true`, o rodapé permanece fixo na parte inferior da janela de visualização. Quando `false`, aparece no final do conteúdo da página.
+- `back_to_top`: Exibe um botão "voltar ao topo" no rodapé. Quando clicado, a página desce suavemente para o topo.
+- `max_width`: Controla a largura máxima da área de conteúdo principal em pixels. O padrão é `930px`. Você pode ajustar isso para tornar seu conteúdo mais largo ou estreito.
+
+## Configurando recursos de busca
+
+O tema inclui uma funcionalidade de busca poderosa que pode ser personalizada em [\_config.yml](_config.yml):
+
+```yaml
+search_enabled: true
+socials_in_search: true
+posts_in_search: true
+bib_search: true
+```
+
+- `search_enabled`: Habilita a funcionalidade de busca em todo o site. Quando habilitada, uma caixa de pesquisa aparece na barra de navegação, permitindo que os usuários pesquisem em todo o conteúdo do site.
+- `socials_in_search`: Inclui seus links de mídia social e informações de contato nos resultados da pesquisa. Isso facilita que os visitantes encontrem maneiras de se conectar com você.
+- `posts_in_search`: Inclui postagens de blog no índice de pesquisa. Os usuários podem pesquisar posts por título, conteúdo ou tags.
+- `bib_search`: Habilita a busca dentro de suas publicações/bibliografia. Quando habilitada, uma caixa de pesquisa aparece na página de publicações, permitindo que os visitantes filtrem publicações por título, autor, local ou ano.
+
+Todos esses recursos de pesquisa funcionam em tempo real e não requerem recarregamento de página.
+
+## Gerenciando exibição de publicações
+
+O tema oferece várias opções para personalizar como as publicações são exibidas:
+
+```yaml
+enable_publication_thumbnails: true
+max_author_limit: 3
+more_authors_animation_delay: 10
+```
+
+- `enable_publication_thumbnails`: Quando `true`, exibe imagens de visualização para publicações (se especificado na entrada BibTeX com o campo `preview`). Defina como `false` para desabilitar miniaturas para todas as publicações.
+- `max_author_limit`: Define o número máximo de autores exibidos inicialmente para cada publicação. Se uma publicação tiver mais autores, eles ficarão ocultos atrás de um link "mais autores". Deixe em branco para sempre mostrar todos os autores.
+- `more_authors_animation_delay`: Controla a velocidade da animação (em milissegundos) ao revelar autores adicionais. Um valor menor significa animação mais rápida.
+
+Para adicionar uma minatura a uma publicação, inclua um campo `preview` em sua entrada BibTeX:
+
+```bibtex
+@article{example2024,
+  title={Example Paper},
+  author={Author, First and Author, Second},
+  journal={Example Journal},
+  year={2024},
+  preview={example_preview.png}
+}
+```
+
+Coloque o arquivo de imagem em `assets/img/publication_preview/`.
+
+## Atualizando bibliotecas de terceiros
+
+O tema usa várias bibliotecas JavaScript e CSS de terceiros. Você pode gerenciar essas na seção `third_party_libraries` de [\_config.yml](_config.yml):
+
+```yaml
+third_party_libraries:
+  download: false
+  bootstrap-table:
+    version: "1.22.4"
+    url:
+      css: "https://cdn.jsdelivr.net/npm/bootstrap-table@{{version}}/dist/bootstrap-table.min.css"
+      js: "https://cdn.jsdelivr.net/npm/bootstrap-table@{{version}}/dist/bootstrap-table.min.js"
+    integrity:
+      css: "sha256-..."
+      js: "sha256-..."
+```
+
+- `download`: Quando `false` (padrão), as bibliotecas são carregadas de CDNs. Quando `true`, as versões especificadas da biblioteca são baixadas durante a construção e servidas a partir do seu site. Isso pode melhorar o desempenho, mas aumenta o tamanho do seu repositório.
+- `version`: Especifica qual versão de cada biblioteca usar. Atualize isso para usar uma versão mais recente.
+- `url`: URLs de modelo para carregar a biblioteca. O placeholder `{{version}}` é substituído pelo número da versão.
+- `integrity`: Hashes de [Subresource Integrity (SRI)](https://developer.mozilla.org/pt-BR/docs/Web/Security/Subresource_Integrity) garantem que a biblioteca não foi adulterada. Ao atualizar uma versão de biblioteca, você também deve atualizar seu hash de integridade.
+
+Para atualizar uma biblioteca:
+
+1. Altere o número da `version`
+2. Obtenha o novo hash de integridade para a versão atualizada da biblioteca e atualize o campo `integrity` com o novo hash. Você pode:
+
+   - Verificar se o provedor de CDN (por exemplo, jsDelivr, cdnjs, unpkg) fornece o hash SRI para o arquivo. Muitos sites de CDN exibem o hash SRI junto da URL do arquivo.
+   - Gerar o hash SRI você mesmo usando uma ferramenta como [SRI Hash Generator](https://www.srihash.org/) ou executando o seguinte comando em seu terminal:
+
+     ```bash
+     curl -sL [FILE_URL] | openssl dgst -sha384 -binary | openssl base64 -A
+     ```
+
+     Substitua `[FILE_URL]` pela URL do arquivo da biblioteca. Em seguida, adicione `sha384-` ao resultado e use-o no campo `integrity`.
+
+     Para instruções detalhadas sobre como atualizar bibliotecas específicas, veja as Perguntas Frequentes:
+
+     - [Como posso atualizar a versão do Academicons](FAQ.pt-br.md#como-posso-atualizar-a-versão-do-academicons-no-modelo)
+     - [Como posso atualizar a versão do Font Awesome](FAQ.pt-br.md#como-posso-atualizar-a-versão-do-font-awesome-no-modelo)
+     - [Como posso atualizar a versão do Tabler Icons](FAQ.pt-br.md#como-posso-atualizar-a-versão-do-tabler-icons-no-modelo)
+
+## Removendo conteúdo
+
+Como este template possui muito conteúdo, pode ser que você queira remover parte dele. A maneira mais simples de fazer isso e evitar conflitos de merge ao atualizar seu código (como [apontado por CheariX](https://github.com/alshedivat/al-folio/pull/2933#issuecomment-2571271117)) é adicionar os arquivos indesejados à seção `exclude` do seu arquivo [\_config.yml](_config.yml) em vez de deletá-los, por exemplo:
 
 Uma variedade de belas cores de tema foi selecionada para você escolher. O padrão é roxo, mas você pode alterá-la rapidamente editando a variável `--global-theme-color` no arquivo [\_sass/\_themes.scss](_sass/_themes.scss). Outras variáveis de cor também estão listadas nesse arquivo. As opções de cores padrão disponíveis podem ser encontradas em [\_sass/\_variables.scss](_sass/_variables.scss). Você também pode adicionar suas próprias cores a este arquivo, atribuindo a cada uma um nome para facilitar seu uso no template.
 
@@ -298,3 +567,47 @@ Nesta pasta, os arquivos devem ser salvos no mesmo formato que seriam salvos em 
   - `2025-08-27-file2.md` será publicado exatamente em 27 de agosto de 2025.
   - `File3.md` não será publicado.
   - `2026-02-31-file4.md` está programado para ser publicado em 31 de fevereiro de 2026, mas como fevereiro não tem 31 dias, esse arquivo nunca será publicado.
+
+## Configurando um Personal Access Token (PAT) para Atualizações de Citações do Google Scholar
+
+> [!TIP]
+> Após configurar o al-folio, você pode querer executar `python3 bin/update_citations.py` para preencher o arquivo `_data/citations.yml` com suas contagens de citações do Google Scholar.
+
+Este projeto inclui um fluxo de trabalho automatizado para atualizar as contagens de citações de suas publicações usando o Google Scholar.
+O fluxo de trabalho faz commit das alterações em `_data/citations.yml` diretamente no ramo `main`.
+Por padrão, o `GITHUB_TOKEN` será usado para fazer commit das alterações.
+No entanto, este token não tem permissão para acionar fluxos de trabalho subsequentes, como o fluxo de trabalho de reconstrução do site.
+Para implantar as alterações de `main`, você pode acionar manualmente o fluxo de trabalho `deploy`.
+
+> [!TIP]
+> Para garantir que esses commits possam acionar workflows adicionais do GitHub Actions (como reconstruções de site), você pode usar um Personal Access Token (PAT) em vez do token GitHub Actions padrão.
+> Se você configurou um PAT, as atualizações de citações acionarão fluxos de trabalho adicionais (como reconstruções de site) após fazer commit das alterações. Para executar a ação com um PAT, você precisa descomentar as seguintes linhas do arquivo de workflow (`update-citations.yml`):
+>
+> ```yaml
+> with:
+>   token: ${{ secrets.PAT }}
+> ```
+
+### Por que um PAT é necessário?
+
+O GitHub restringe o `GITHUB_TOKEN` padrão de acionar outros fluxos de trabalho quando um commit é feito dentro de um fluxo de trabalho. Usar um PAT supera essa limitação e permite automação completa.
+
+### Como configurar o PAT
+
+1. **Crie um Personal Access Token**
+
+   - Vá para [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens).
+   - Clique em "Generate new token" (clássico ou fine-grained).
+   - Conceda pelo menos as seguintes permissões:
+     - `repo` (para tokens clássicos se repo é privado), `public_repo` (para tokens clássicos se repo é público) ou `contents: read/write` (para tokens fine-grained)
+   - Salve o token em algum lugar seguro.
+
+2. **Adicione o PAT como um secret do repositório**
+
+   - Vá para seu repositório no GitHub.
+   - Navegue até `Settings` > `Secrets and variables` > `Actions` > `New repository secret`.
+   - Nomeie o secret como `PAT` (deve corresponder ao nome usado no fluxo de trabalho).
+   - Cole seu PAT e salve.
+
+3. **Uso do fluxo de trabalho**
+   O fluxo de trabalho `.github/workflows/update-citations.yml` usa este PAT para fazer commit de atualizações em `_data/citations.yml`.

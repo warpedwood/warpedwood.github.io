@@ -165,3 +165,78 @@ No arquivo de configuração `_config.yml`, a tag `google-site-verification` dev
 - A string atribuída a `content` é o ID do Google Search Console que pode ser utilizado no template, por exemplo: `google-site-verification: GoogleSearchConsoleID`. Em seguida, defina a propriedade `enable_google_verification: true`.
 
 Note que a verificação do tipo de Domínio no Google Search Console, para verificar a propriedade de todas as URLs em todos os subdomínios com o GitHub Pages, não funciona.
+
+---
+
+### Como posso atualizar a versão do Academicons no modelo
+
+Para atualizar a versão do Academicons, você precisa baixar a versão mais recente do [site do Academicons](https://jpswalsh.github.io/academicons/). Após baixar, extraia o arquivo zip e copie os arquivos `academicons.ttf` e `academicons.woff` do diretório `fonts/` para `assets/fonts/` e o arquivo `academicons.min.css` do diretório `css/` para `assets/css/`.
+
+---
+
+### Como posso atualizar a versão do Font Awesome no modelo
+
+Para atualizar a versão do Font Awesome, você precisa baixar a versão mais recente "para a web" do [site do Font Awesome](https://fontawesome.com/download). Após baixar, extraia o arquivo zip e copie o conteúdo do diretório `scss/` para `_sass/font-awesome/` e o conteúdo de `webfonts/` para `assets/webfonts/`.
+
+---
+
+### Como posso atualizar a versão do Tabler Icons no modelo
+
+Para atualizar a versão do Tabler Icons, você precisa baixar a versão mais recente do [site do Tabler Icons](https://tabler.io/icons). Após baixar, extraia o arquivo zip e copie os arquivos `tabler-icons-filled.scss`, `tabler-icons-outline.scss` e `tabler-icons.scss` do diretório `webfont/` para `_sass/tabler-icons/`, e todos os arquivos de `webfont/fonts/` para `assets/fonts/`.
+
+---
+
+### O que significam todos esses GitHub actions/workflows?
+
+As ações GitHub são uma forma de automatizar tarefas no repositório. Elas são definidas no diretório `.github/workflows/`. Cada arquivo neste diretório é um fluxo de trabalho. Os fluxos de trabalho são compostos por um ou mais trabalhos, e cada trabalho é executado em uma máquina virtual hospedada pelo GitHub. Você pode ver o status dos fluxos de trabalho na aba `Actions` do seu repositório. Para mais informações, consulte a [documentação do GitHub Actions](https://docs.github.com/en/actions).
+
+Atualmente temos os seguintes fluxos de trabalho:
+
+- `axe.yml`: faz alguns testes de acessibilidade em seu site. Ele usa a ferramenta [axe cli](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/cli) com um driver chrome para renderizar a página da web e permitir a análise. Deve ser executado manualmente, pois corrigir alguns dos problemas não é direto
+- `broken-links-site.yml`: verifica se há links quebrados em seu site construído com o [lychee-action](https://github.com/lycheeverse/lychee-action)
+- `broken-links.yml`: verifica se há links quebrados em seu repositório com o [lychee-action](https://github.com/lycheeverse/lychee-action)
+- `deploy-docker-tag.yml`: adiciona alguns metadados à imagem docker e a envia para Docker Hub
+- `deploy-image.yml`: implanta uma nova imagem docker com as alterações mais recentes para Docker Hub
+- `deploy.yml`: implanta o site no GitHub Pages
+- `docker-slim.yml`: implanta uma versão menor da imagem docker para Docker Hub com o [docker-slim-action](https://github.com/kitabisa/docker-slim-action)
+- `lighthouse-badger.yml`: executa um teste [lighthouse](https://github.com/GoogleChrome/lighthouse) para seu site com o [lighthouse-badger-action](https://github.com/MyActionWay/lighthouse-badger-action), salvando os resultados no repositório para fácil inspeção, como pode ser visto [aqui](https://github.com/alshedivat/al-folio?tab=readme-ov-file#lighthouse-pagespeed-insights). Para mais informações sobre como ativar este fluxo de trabalho, consulte nossa [pergunta de FAQ sobre isso](https://github.com/alshedivat/al-folio/blob/main/FAQ.md#when-i-manually-run-the-lighthouse-badger-workflow-it-fails-with-error-input-required-and-not-supplied-token-how-do-i-fix-that)
+- `prettier-comment-on-pr.yml`: não funciona. Por enquanto, esta ação está desativada. Era para executar prettier nos PRs e comentar neles com as alterações necessárias. Para mais informações, consulte [issue 2115](https://github.com/alshedivat/al-folio/issues/2115)
+- `prettier.yml`: executa [prettier](https://prettier.io/) no código para garantir que esteja bem formatado. Para mais informações, consulte nossa [pergunta de FAQ sobre isso](https://github.com/alshedivat/al-folio/blob/main/FAQ.md#my-code-runs-fine-locally-but-when-i-create-a-commit-and-submit-it-it-fails-with-prettier-code-formatter-workflow-run-failed-for-main-branch-how-do-i-fix-that)
+
+---
+
+### O que são Code Wiki e DeepWiki?
+
+**Code Wiki** e **DeepWiki** são ferramentas alimentadas por IA que ajudam você a entender repositórios GitHub através de documentação interativa. Elas devem ser tratadas como recursos complementares quando você não consegue encontrar as informações de que precisa na documentação oficial do projeto.
+
+#### Quando usar essas ferramentas
+
+**Use Code Wiki e DeepWiki apenas depois** de:
+
+- Você ter revisado os arquivos de documentação relevantes neste repositório (`README.md`, `INSTALL.md`, `CUSTOMIZE.md`, `FAQ.md` ou `CONTRIBUTING.md`)
+- Você ter verificado a [seção de Q&A das Discussões do GitHub](https://github.com/alshedivat/al-folio/discussions/categories/q-a) para perguntas semelhantes
+- Você ter pesquisado [Issues do GitHub](https://github.com/alshedivat/al-folio/issues) existentes
+
+#### O que eles fazem
+
+**Code Wiki** (alimentado por Google Gemini) gera documentação interativa a partir do código do seu repositório. Ele permite que você:
+
+- Navegue pela estrutura e arquitetura do seu repositório
+- Pesquise funções ou módulos específicos
+- Entenda como diferentes partes da base de código funcionam juntas
+- Obtenha diagramas e representações visuais da arquitetura do seu código
+
+**DeepWiki** fornece uma interface alimentada por IA para fazer perguntas sobre um repositório, semelhante a ter um engenheiro disponível 24/7. Ele permite que você:
+
+- Faça perguntas em linguagem natural sobre a base de código
+- Obtenha respostas instantâneas sobre como recursos específicos funcionam
+- Pesquise padrões de código e implementações
+
+#### Limitações
+
+Essas ferramentas são geradas automaticamente a partir do nosso código e podem não refletir sempre os padrões de documentação mais atuais ou as melhores práticas específicas deste projeto. Elas não devem substituir a documentação oficial, mas sim complementá-la quando você precisar de insights técnicos mais profundos.
+
+#### Acesse essas ferramentas
+
+- **Code Wiki**: [Code Wiki for al-folio](https://codewiki.google/github.com/george-gca/multi-language-al-folio)
+- **DeepWiki**: [DeepWiki for al-folio](https://deepwiki.com/george-gca/multi-language-al-folio)
