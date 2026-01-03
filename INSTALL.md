@@ -1,6 +1,7 @@
-# Table of Contents
+# Installing and Deploying
 
-- [Table of Contents](#table-of-contents)
+<!--ts-->
+
 - [Installing and Deploying](#installing-and-deploying)
   - [Recommended Approach](#recommended-approach)
   - [Local setup on Windows](#local-setup-on-windows)
@@ -19,7 +20,7 @@
     - [Deployment to a separate repository (advanced users only)](#deployment-to-a-separate-repository-advanced-users-only)
   - [Upgrading from a previous version](#upgrading-from-a-previous-version)
 
-# Installing and Deploying
+<!--te-->
 
 ## Recommended Approach
 
@@ -242,7 +243,7 @@ If you installed **multi-language-al-folio** as described above, you can manuall
 # Assuming the current directory is <your-repo-name>
 $ git remote add upstream https://github.com/george-gca/multi-language-al-folio.git
 $ git fetch upstream
-$ git rebase v1.14.5
+$ git rebase v1.15.0
 ```
 
 If you have extensively customized a previous version, it might be trickier to upgrade.
