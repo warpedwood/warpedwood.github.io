@@ -7,7 +7,7 @@ permalink: /assets/js/search-data.js
 {% assign lang = site.active_lang %}
 {% endif %}
 const currentUrl = window.location.href;
-const siteUrl = "{{ site.url }}"; 
+const siteUrl = "{{ site.url }}";
 let updatedUrl = currentUrl.replace("{{ site.url }}{{ site.baseurl }}", "");
 if (currentUrl.length == updatedUrl.length && currentUrl.startsWith("http://127.0.0.1")) {
   const otherSiteUrl = siteUrl.replace("localhost", "127.0.0.1");
@@ -136,7 +136,7 @@ ninja.data = [
         {%- when "cv_pdf" -%}
           {%- assign social_id = "social-cv" -%}
           {%- assign social_title = "CV" -%}
-          {%- capture social_url %}"{{ social[1] | relative_url }}"{% endcapture -%}
+          {%- capture social_url %}{% if social[1] contains '://' %}"{{ social[1] }}"{% else %}"{{ social[1] | prepend: '/' | prepend: site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl }}"{% endif %}{% endcapture -%}
         {%- when "dblp_url" -%}
           {%- assign social_id = "social-dblp" -%}
           {%- assign social_title = "DBLP" -%}
