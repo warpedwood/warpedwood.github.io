@@ -140,12 +140,18 @@ newsletter:
 collections:
   books:
     output: true
+    # this is needed to avoid adding language here, like /:collection/:lang/:title/
+    permalink: /:collection/:title/
   news:
     defaults:
       layout: post
     output: true
+    # this is needed to avoid adding language here, like /:collection/:lang/:title/
+    permalink: /:collection/:title/
   projects:
     output: true
+    # this is needed to avoid adding language here, like /:collection/:lang/:title/
+    permalink: /:collection/:title/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
