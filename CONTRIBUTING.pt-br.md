@@ -8,20 +8,20 @@ Agradecemos seus pull requests (PRs).
 Para correções menores (por exemplo, melhorias na documentação), sinta-se à vontade para enviar um PR diretamente.
 Se você deseja implementar um novo recurso ou corrigir um bug, por favor, certifique-se de que você (ou outra pessoa) já abriu uma issue apropriada primeiro; no seu PR, mencione a issue que ele resolve.
 
-Note que, desde [#2048](https://github.com/alshedivat/al-folio/pull/2048), o al-folio utiliza o [formater prettier](https://prettier.io/) para seu código, o que significa que todo código novo enviado deve estar em conformidade com esse padrão. Se você não tem o `prettier` instalado na sua configuração e a verificação de código com o `prettier` falhar ao enviar um PR, você pode verificar a ação que falhou em nosso repositório. Nessa ação haverá um artifact com um diff em HTML mostrando as alterações necessárias.
+Note que, desde [#2048](https://github.com/alshedivat/al-folio/pull/2048), o al-folio utiliza o [formater prettier](https://prettier.io/) para seu código, o que significa que todo código novo enviado deve estar em conformidade com esse padrão. Se você não tem o `prettier` instalado no seu ambiente de desenvolvimento e a verificação de código com o `prettier` falhar ao enviar um PR, você pode verificar a ação que falhou em nosso repositório. Nessa ação haverá um artifact com um diff em HTML mostrando as alterações necessárias.
 
 ### Adicionando novas informações de mídia social
 
-Para adicionar novas informações de mídia social, há alguns lugares que você pode precisar modificar. Atualmente, o modelo suporta ícones de [Academicons](https://jpswalsh.github.io/academicons/), [Font Awesome](https://fontawesome.com/) e [Tabler Icons](https://tabler.io/icons). Para um exemplo de PR, consulte [Add HAL id to socials](https://github.com/alshedivat/al-folio/pull/3206/files). Note que as informações em todos estes arquivos estão ordenadas alfabeticamente.
+Para adicionar novas informações de mídia social, há alguns lugares que você pode precisar modificar. Atualmente, o modelo suporta ícones do [Academicons](https://jpswalsh.github.io/academicons/), [Font Awesome](https://fontawesome.com/) e [Tabler Icons](https://tabler.io/icons). Para um exemplo de PR, consulte [Add HAL id to socials](https://github.com/alshedivat/al-folio/pull/3206/files). Note que as informações em todos estes arquivos estão ordenadas alfabeticamente.
 
 - \_data/socials.yml - suas informações de mídia social
 - \_includes/metadata.liquid - adicione informações de mídia social aos metadados do site
 - \_includes/social.liquid - onde o ícone de mídia social será exibido
 - \_scripts/search.liquid.js - faça com que as informações de mídia social apareçam na pesquisa
 
-## Agentes GitHub Copilot
+## Agentes do GitHub Copilot
 
-Este repositório inclui dois agentes GitHub Copilot especializados para auxiliar no desenvolvimento e documentação:
+Este repositório inclui dois agentes do GitHub Copilot especializados para auxiliar no desenvolvimento e documentação:
 
 ### Agente de Personalização
 
@@ -52,7 +52,7 @@ Embora esses agentes sejam projetados para ajudá-lo, **eles podem cometer erros
 - **Revise código e mudanças de configuração** – Verifique se as modificações sugeridas estão corretas e atendem às suas necessidades
 - **Teste alterações localmente** – Antes de fazer push para o GitHub, teste as alterações localmente (usando Docker ou instalação nativa)
 - **Verifique a sintaxe** – Certifique-se de que quaisquer arquivos YAML, Markdown ou de configuração tenham sintaxe correta
-- **Verifique a documentação** – Se o agente gerar documentação, revise-a para exatidão e clareza
+- **Verifique a documentação** – Se o agente gerar documentação, revise-a quanto à exatidão e clareza
 - **Não aplique alterações cegamente** – Entenda o que está sendo alterado e por quê
 - **Execute seu site** – Após aplicar as alterações, execute seu site localmente e verifique se tudo funciona conforme esperado
 
@@ -66,7 +66,7 @@ Os agentes GitHub Copilot estão disponíveis para usuários com assinaturas do 
 2. Abra seu repositório em um editor com suporte ao GitHub Copilot (como VS Code com a extensão GitHub Copilot)
 3. Os agentes estarão automaticamente disponíveis com base nos arquivos de configuração em `.github/agents/`. Para mais informações, veja [Usando agentes customizados no seu IDE](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents#using-custom-agents-in-your-ide).
 
-Para mais informações sobre agentes GitHub Copilot e como usá-los, veja a [documentação do GitHub Copilot](https://docs.github.com/en/copilot).
+Para mais informações sobre agentes do GitHub Copilot e como usá-los, veja a [documentação do GitHub Copilot](https://docs.github.com/en/copilot).
 
 ## Issues
 

@@ -200,8 +200,8 @@ These tools are best used for:
 
 **Access these tools:**
 
-- **Code Wiki**: [Code Wiki for al-folio](https://codewiki.google/github.com/george-gca/multi-language-al-folio)
-- **DeepWiki**: [DeepWiki for al-folio](https://deepwiki.com/george-gca/multi-language-al-folio)
+- **Code Wiki**: [Code Wiki for multi-language-al-folio](https://codewiki.google/github.com/george-gca/multi-language-al-folio)
+- **DeepWiki**: [DeepWiki for multi-language-al-folio](https://deepwiki.com/george-gca/multi-language-al-folio)
 
 ## Technology Stack
 
@@ -392,7 +392,7 @@ max_width: 930px
 - `navbar_fixed`: When `true`, the navigation bar stays fixed at the top of the page when scrolling. When `false`, it scrolls with the page content.
 - `footer_fixed`: When `true`, the footer remains fixed at the bottom of the viewport. When `false`, it appears at the end of the page content.
 - `back_to_top`: Displays a "back to top" button in the footer. When clicked, it smoothly scrolls the page back to the top.
-- `max_width`: Controls the maximum width of the main content area in pixels. The default is `930px`. You can adjust this to make your content wider or narrower.
+- `max_width`: Controls the maximum width of the main content area in pixels. You can adjust this to make your content wider or narrower.
 
 ## Adding social media information
 

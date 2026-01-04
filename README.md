@@ -282,6 +282,8 @@ Run the test yourself: [Google Lighthouse PageSpeed Insights](https://pagespeed.
   - [Star History](#star-history)
   - [License](#license)
 
+<!--te-->
+
 ## Getting started
 
 Want to learn more about Jekyll? Check out [this tutorial](https://www.taniarascia.com/make-a-static-website-with-jekyll/). Why Jekyll? Read [Andrej Karpathy's blog post](https://karpathy.github.io/2014/07/01/switching-to-jekyll/)! Why write a blog? Read [Rachel Thomas blog post](https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045).

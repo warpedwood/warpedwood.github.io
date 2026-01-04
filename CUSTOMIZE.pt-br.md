@@ -4,6 +4,11 @@ Aqui forneceremos algumas dicas sobre como personalizar o site. Uma coisa import
 
 Note que, ao longo dos arquivos [README.md](README.pt-br.md) e [CUSTOMIZE.md](CUSTOMIZE.pt-br.md), o idioma padrão é o inglês (LANG = en-us). Você deve ter um arquivo ou caminho equivalente para cada idioma definido em [\_config.yml](_config.yml). Por exemplo, se você definiu `languages: ["en-us", "pt-br"]`, deverá haver 2 versões do arquivo `_data/LANG/cv.yml`: [\_data/en-us/cv.yml](_data/en-us/cv.yml) e [\_data/pt-br/cv.yml](_data/pt-br/cv.yml).
 
+> **Nota para usuários sem experiência em programação:** Você **não** precisa entender a pilha de tecnologias ou ter qualquer conhecimento em programação para criar e personalizar seu próprio site com o al-folio. Este modelo foi especificamente projetado para ser acessível a acadêmicos e pesquisadores de todas as áreas. Você pode criar um site totalmente funcional simplesmente editando arquivos de configuração e adicionando conteúdo em Markdown, sem necessidade de programação.
+
+<!--ts-->
+<!--te-->
+
 ## Estrutura do Projeto
 
 O projeto está estruturado da seguinte forma, com foco nos principais componentes que você precisará modificar:
@@ -21,7 +26,7 @@ O projeto está estruturado da seguinte forma, com foco nos principais component
 ├── 📂 _data/: contém alguns dos dados utilizados no template
 │   ├── 📂 LANG/: dados para a versão LANG. Deve existir uma para cada idioma definido em _config.yml
 │   │   ├── 📄 cv.yml: Currículo em formato YAML, utilizado quando assets/json/resume_LANG.json não existe
-|   |   └── 📄 strings.yml: variáveis localizadas (placeholders). Deve existir uma para cada idioma definido em _config.yml
+|   |   └── 📄 strings.yml: variáveis traduzidas (placeholders). Deve existir uma para cada idioma definido em _config.yml
 │   ├── 📄 repositories.yml: informações de usuários e repositórios em formato YAML
 │   └── 📄 socials.yml: suas informações de redes sociais e contato em formato YAML
 ├── 📂 _includes/: contém partes de código que são incluídas no HTML principal
@@ -55,7 +60,7 @@ Todas as alterações feitas neste arquivo só são visíveis após você recons
 
 ## Agente de Personalização GitHub Copilot
 
-Este repositório inclui um agente GitHub Copilot especializado (`.github/agents/customize.agent.md`) projetado para ajudá-lo a personalizar seu site al-folio. O agente funciona como um assistente especialista que pode:
+Este repositório inclui um agente do GitHub Copilot especializado (`.github/agents/customize.agent.md`) projetado para ajudá-lo a personalizar seu site al-folio. O agente funciona como um assistente especialista que pode:
 
 - Orientá-lo através de tarefas comuns de personalização passo a passo
 - Modificar arquivos de configuração, adicionar conteúdo e atualizar seu site
@@ -81,7 +86,7 @@ O agente de personalização pode auxiliar em tarefas como:
 
 Para usar o agente de personalização:
 
-1. Certifique-se de ter uma assinatura de [GitHub Copilot](https://github.com/features/copilot)
+1. Certifique-se de ter uma assinatura do [GitHub Copilot](https://github.com/features/copilot)
 2. Abra seu repositório em um editor com suporte ao GitHub Copilot (como VS Code com a extensão GitHub Copilot)
 3. Interaja com GitHub Copilot e faça perguntas ou solicite alterações. Para mais informações, consulte [Usando agentes customizados no seu IDE](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents#using-custom-agents-in-your-ide)
 4. O agente o guiará através do processo de personalização e pode fazer alterações diretamente em seus arquivos
@@ -123,7 +128,7 @@ Se você estiver interessado em aprender mais sobre como o al-folio funciona por
 
 **Code Wiki** e **DeepWiki** são ferramentas alimentadas por IA que ajudam você a explorar e entender repositórios GitHub através de documentação interativa:
 
-- **Code Wiki** (alimentado por Google Gemini) gera documentação interativa a partir do código do repositório. Você pode navegar pela estrutura do projeto, pesquisar funções ou módulos específicos, visualizar diagramas de arquitetura e entender como diferentes componentes interagem.
+- **Code Wiki** (alimentado pelo Google Gemini) gera documentação interativa a partir do código do repositório. Você pode navegar pela estrutura do projeto, pesquisar funções ou módulos específicos, visualizar diagramas de arquitetura e entender como diferentes componentes interagem.
 
 - **DeepWiki** fornece uma interface de chat com IA onde você pode fazer perguntas em linguagem natural sobre a base de código, semelhante a ter um engenheiro disponível 24/7. Você pode perguntar como os recursos funcionam, pesquisar padrões de código ou obter explicações de lógica complexa.
 
@@ -145,8 +150,8 @@ Essas ferramentas são melhor utilizadas para:
 
 **Acesse essas ferramentas:**
 
-- **Code Wiki**: [Code Wiki for al-folio](https://codewiki.google/github.com/george-gca/multi-language-al-folio)
-- **DeepWiki**: [DeepWiki for al-folio](https://deepwiki.com/george-gca/multi-language-al-folio)
+- **Code Wiki**: [Code Wiki para o multi-language-al-folio](https://codewiki.google/github.com/george-gca/multi-language-al-folio)
+- **DeepWiki**: [DeepWiki para o multi-language-al-folio](https://deepwiki.com/george-gca/multi-language-al-folio)
 
 ## Pilha de Tecnologia
 
@@ -157,9 +162,9 @@ Entender a pilha de tecnologia do al-folio o ajudará a personalizar e estender 
 - **Markdown**: O conteúdo é escrito em formato Markdown para páginas, postagens de blog e coleções. Isso facilita a criação e manutenção de conteúdo sem se preocupar com HTML.
 - **Templating Liquid**: [Liquid](https://shopify.github.io/liquid/) é usado para geração dinâmica de modelos. Os modelos Liquid são usados nos diretórios `_layouts/` e `_includes/` para definir como seu conteúdo deve ser exibido.
 - **HTML & CSS**: O tema usa HTML5 semântico e CSS moderno para estilo e layout.
-- **SCSS**: As folhas de estilo são escritas em [SCSS (Sass)](https://sass-lang.com/), um pré-processador CSS que fornece variáveis, mixins e funções para estilo mais mantível. Os arquivos SCSS estão localizados em `_sass/` e compilados para CSS durante o processo de construção.
-- **Bootstrap**: [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/) é usado para layout responsivo da grade e componentes de estilo base.
-- **JavaScript**: JavaScript mínimo é usado para recursos interativos como alternância de modo escuro, funcionalidade de pesquisa e renderização dinâmica de conteúdo.
+- **SCSS**: As folhas de estilo são escritas em [SCSS (Sass)](https://sass-lang.com/), um pré-processador CSS que fornece variáveis, mixins e funções para estilo mais fáceis de manter. Os arquivos SCSS estão localizados em `_sass/` e são compilados para CSS durante o processo de construção.
+- **Bootstrap**: [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/) é usado para layout de grade responsivo e componentes base de estilo.
+- **JavaScript**: JavaScript básico é usado para recursos interativos como alternância de modo escuro, funcionalidade de pesquisa e renderização dinâmica de conteúdo.
 - **MathJax**: Para renderizar equações matemáticas em formato LaTeX em suas páginas e postagens de blog.
 - **Mermaid**: Para criar diagramas (fluxogramas, diagramas de sequência, etc.) diretamente em Markdown.
 - **Font Awesome, Academicons e Tabler Icons**: Bibliotecas de ícones usadas ao longo do tema para elementos visuais.
@@ -178,12 +183,12 @@ Entender a pilha de tecnologia do al-folio o ajudará a personalizar e estender 
 
   - `jekyll-scholar`: Gerencia arquivos de bibliografia (BibTeX) e gera páginas de publicações com citações
   - `jekyll-archives-v2`: Cria páginas de arquivo para postagens e coleções organizadas por categoria, tag ou data
-  - `jekyll-paginate-v2`: Manipula paginação para postagens de blog e arquivos
+  - `jekyll-paginate-v2`: Lida com paginação para postagens de blog e arquivos
   - `jekyll-feed`: Gera um feed Atom (semelhante a RSS) para seu conteúdo
   - `jekyll-toc`: Gera automaticamente tabela de conteúdos para páginas com cabeçalhos
   - `jekyll-jupyter-notebook`: Integra notebooks Jupyter em seu site
-  - `jekyll-tabs`: Adiciona suporte de conteúdo em abas
-  - `jemoji`: Converte abreviações de emoji em imagens de emoji
+  - `jekyll-tabs`: Adiciona suporte a conteúdo em abas
+  - `jemoji`: Converte códigos de emoji em imagens de emoji
   - `jekyll-minifier`: Minifica HTML, CSS e JavaScript para melhor desempenho
   - `classifier-reborn`: Usado para categorizar e encontrar postagens de blog relacionadas
   - Outros utilitários: `jekyll-link-attributes`, `jekyll-imagemagick`, `jekyll-twitter-plugin`, `jekyll-get-json` e muito mais
@@ -194,9 +199,9 @@ Entender a pilha de tecnologia do al-folio o ajudará a personalizar e estender 
 
 - **GitHub Actions**: Fluxos de trabalho automatizados para construir, testar e implantar seu site. Os fluxos de trabalho estão definidos em `.github/workflows/`:
 
-  - **Deploy**: Constrói e implanta automaticamente seu site no GitHub Pages quando você faz push de alterações para o ramo principal
+  - **Deploy**: Constrói e implanta automaticamente seu site no GitHub Pages quando você faz push de alterações para o branch principal
   - **Verificação de links**: Valida que todos os links do seu site não estão quebrados
-  - **Formatação de código**: Garante que o código segue o estilo de código Prettier
+  - **Formatação de código**: Garante que o código segue o estilo de código do Prettier
   - **Testes de acessibilidade**: Verifica se há problemas de acessibilidade usando Axe
   - **Lighthouse**: Mede o desempenho do site e as melhores práticas
   - **Atualizações de citações**: Busca automaticamente contagens de citações do Google Scholar
@@ -248,11 +253,11 @@ Você pode adicionar notícias na página "Sobre" adicionando novos arquivos Mar
 
 ## Adicionando Coleções
 
-Este tema Jekyll implementa [coleções](https://jekyllrb.com/docs/collections/) para que você possa dividir seu trabalho em categorias. O tema já vem com três coleções padrão: `news`, `projects` e `books`. Os itens da collection `news` são exibidos automaticamente na página inicial, enquanto os itens da collection `projects` são exibidos em uma grade responsiva na página de projetos e os itens da collection `books` são exibidos em sua própria página de estante dentro dos submenus.
+Este tema Jekyll implementa [coleções](https://jekyllrb.com/docs/collections/) para que você possa dividir seu trabalho em categorias. O tema já vem com três coleções padrão: `news`, `projects` e `books`. Os itens da coleção `news` são exibidos automaticamente na página inicial, enquanto os itens da coleção `projects` são exibidos em uma grade responsiva na página de projetos e os itens da coleção `books` são exibidos em sua própria página de estante de livros dentro dos submenus.
 
-Você pode facilmente criar suas próprias coleções, como apps, contos, cursos ou qualquer outro trabalho criativo. Para isso, edite as coleções no arquivo [\_config.yml](_config.yml), crie uma pasta correspondente e crie uma página de destino para sua collection, semelhante a [\_pages/LANG/projects.md](_pages/en-us/projects.md).
+Você pode facilmente criar suas próprias coleções, como apps, contos, cursos ou qualquer outro trabalho criativo. Para isso, edite as coleções no arquivo [\_config.yml](_config.yml), crie uma pasta correspondente e crie uma página de destino para sua coleção, semelhante a [\_pages/LANG/projects.md](_pages/en-us/projects.md).
 
-Se desejar criar uma collection com suporte para categorias e tags, como os posts do blog, basta adicionar essa collection à seção `jekyll-archives` do arquivo [\_config.yml](_config.yml). Você pode ver como isso é feito com a coleção `books`. Para mais informações sobre como personalizar a seção de arquivos ou criar sua própria página de arquivos, consulte a [documentação do jekyll-archives-v2](https://george-gca.github.io/jekyll-archives-v2/).
+Se desejar criar uma coleção com suporte para categorias e tags, como os posts do blog, basta adicionar essa coleção à seção `jekyll-archives` do arquivo [\_config.yml](_config.yml). Você pode ver como isso é feito com a coleção `books`. Para mais informações sobre como personalizar a seção de arquivos ou criar sua própria página de arquivos, consulte a [documentação do jekyll-archives-v2](https://george-gca.github.io/jekyll-archives-v2/).
 
 Para acessar as coleções, você pode utilizar a variável `site.COLLECTION_NAME` em seus templates.
 
@@ -272,7 +277,7 @@ scholar:
   first_name: [Albert, A.]
 ```
 
-Se a entrada corresponder a alguma forma dos sobrenomes e dos primeiros nomes, ela será sublinhada. Mantenha as meta-informações sobre seus coautores em [\_data/coauthors.yml](_data/coauthors.yml) e o Jekyll inserirá automaticamente links para as páginas deles. O formato dos dados dos coautores é o seguinte, com os sobrenomes em minúsculas e sem acentos, sendo a chave:
+Se a entrada corresponder a alguma forma dos sobrenomes e dos primeiros nomes, ela será sublinhada. Mantenha as meta-informações sobre seus coautores em [\_data/coauthors.yml](_data/coauthors.yml) e o Jekyll irá inserir automaticamente links para as suas páginas. O formato dos dados dos coautores é o seguinte, com os sobrenomes em minúsculas e sem acentos, sendo a chave:
 
 ```yaml
 "adams":
@@ -332,8 +337,18 @@ max_width: 930px
 
 - `navbar_fixed`: Quando `true`, a barra de navegação permanece fixa no topo da página ao descer. Quando `false`, ela se move com o conteúdo da página.
 - `footer_fixed`: Quando `true`, o rodapé permanece fixo na parte inferior da janela de visualização. Quando `false`, aparece no final do conteúdo da página.
-- `back_to_top`: Exibe um botão "voltar ao topo" no rodapé. Quando clicado, a página desce suavemente para o topo.
-- `max_width`: Controla a largura máxima da área de conteúdo principal em pixels. O padrão é `930px`. Você pode ajustar isso para tornar seu conteúdo mais largo ou estreito.
+- `back_to_top`: Exibe um botão "voltar ao topo" no rodapé. Quando clicado, a página sobe suavemente para o topo.
+- `max_width`: Controla a largura máxima da área de conteúdo principal em pixels. Você pode ajustar isso para tornar seu conteúdo mais largo ou estreito.
+
+## Adicionando informações de mídia social
+
+Você pode adicionar seus links de mídia social adicionando as informações especificadas no arquivo [\_data/socials.yml](_data/socials.yml). Essas informações aparecerão na parte inferior da página "Sobre" e nos resultados da pesquisa por padrão, mas isso pode ser alterado para aparecer no cabeçalho da página definindo `enable_navbar_social: true` e não aparecer na pesquisa definindo `socials_in_search: false`, ambos em [\_config.yml](_config.yml).
+
+## Adicionando uma newsletter
+
+Você pode adicionar um formulário de inscrição para newsletter adicionando as informações especificadas na seção `newsletter` do arquivo [\_config.yml](_config.yml). Para configurar uma newsletter, você pode usar um serviço como o [Loops.so](https://loops.so/), que é a solução atualmente suportada. Depois de configurar sua newsletter, você pode adicionar o [endpoint](https://loops.so/docs/forms/custom-form) do formulário ao campo `endpoint` na seção `newsletter` do arquivo [\_config.yml](_config.yml).
+
+Dependendo do comportamento do rodapé que você especificar, o formulário de inscrição aparecerá na parte inferior da página "Sobre" e na parte inferior das postagens do blog se `related_posts` estiver habilitado, ou no rodapé na parte inferior de cada página.
 
 ## Configurando recursos de busca
 
@@ -416,7 +431,6 @@ Para atualizar uma biblioteca:
      ```
 
      Substitua `[FILE_URL]` pela URL do arquivo da biblioteca. Em seguida, adicione `sha384-` ao resultado e use-o no campo `integrity`.
-
      Para instruções detalhadas sobre como atualizar bibliotecas específicas, veja as Perguntas Frequentes:
 
      - [Como posso atualizar a versão do Academicons](FAQ.pt-br.md#como-posso-atualizar-a-versão-do-academicons-no-modelo)
@@ -426,22 +440,6 @@ Para atualizar uma biblioteca:
 ## Removendo conteúdo
 
 Como este template possui muito conteúdo, pode ser que você queira remover parte dele. A maneira mais simples de fazer isso e evitar conflitos de merge ao atualizar seu código (como [apontado por CheariX](https://github.com/alshedivat/al-folio/pull/2933#issuecomment-2571271117)) é adicionar os arquivos indesejados à seção `exclude` do seu arquivo [\_config.yml](_config.yml) em vez de deletá-los, por exemplo:
-
-Uma variedade de belas cores de tema foi selecionada para você escolher. O padrão é roxo, mas você pode alterá-la rapidamente editando a variável `--global-theme-color` no arquivo [\_sass/\_themes.scss](_sass/_themes.scss). Outras variáveis de cor também estão listadas nesse arquivo. As opções de cores padrão disponíveis podem ser encontradas em [\_sass/\_variables.scss](_sass/_variables.scss). Você também pode adicionar suas próprias cores a este arquivo, atribuindo a cada uma um nome para facilitar seu uso no template.
-
-## Adicionando informações de redes sociais
-
-Você pode adicionar os links para suas redes sociais inserindo as informações especificadas no arquivo [\_data/socials.yml](_data/socials.yml). Essas informações aparecerão no rodapé da página “About” e nos resultados de busca por padrão, mas isso pode ser alterado para que apareçam no cabeçalho da página definindo `enable_navbar_social: true` e, para que não apareçam na busca, definindo `socials_in_search: false`, ambas no arquivo [\_config.yml](_config.yml).
-
-## Adicionando uma newsletter
-
-Você pode adicionar um formulário de inscrição para newsletter inserindo as informações especificadas na seção `newsletter` do arquivo [\_config.yml](_config.yml). Para configurar uma newsletter, você pode utilizar um serviço como o [Loops.so](https://loops.so/), que é a solução atualmente suportada. Uma vez configurada a sua newsletter, você pode adicionar o [endpoint](https://loops.so/docs/forms/custom-form) do formulário no campo `endpoint` da seção `newsletter` do arquivo [\_config.yml](_config.yml).
-
-Dependendo do comportamento do rodapé que você especificou, o formulário de inscrição aparecerá no final da página “About” e ao final dos posts do blog, se os `related_posts` estiverem habilitados, ou no rodapé de cada página.
-
-## Removendo conteúdo
-
-Como este template possui muito conteúdo, pode ser que você queira remover parte dele. A maneira mais simples de fazer isso e evitar conflitos de merge ao atualizar seu código (como [apontado por CheariX](https://github.com/alshedivat/al-folio/pull/2933#issuecomment-2571271117)) é adicionar os arquivos indesejados à seção `excludes` do seu arquivo [\_config.yml](_config.yml) em vez de deletá-los, por exemplo:
 
 ```yml
 exclude:
@@ -522,6 +520,28 @@ Para remover os repositórios, você pode:
 
 - excluir a página de repositórios em `_pages/LANG/repositories.md`
 - excluir o diretório [\_includes/repository/](_includes/repository/)
+
+### Você também pode remover páginas comentando blocos de front-matter
+
+Para arquivos `.md` no diretório [\pages](_pages/), se você não quiser editá-los ou excluí-los completamente, mas deseja salvá-los para uso posterior, pode desabilitar temporariamente essas variáveis. Mas esteja ciente de que o Jekyll reconhece o front matter apenas quando ele aparece como não comentado. O layout, permalink e outros comportamentos do front-matter são desabilitados para esse arquivo.
+
+Por exemplo, em books.md faça:
+
+```md
+<!-- ---
+layout: book-shelf
+title: bookshelf
+permalink: /books/
+nav: true
+collection: books
+--- -->
+
+> What an astonishing thing a book is. It's a flat object made from a tree with flexible parts on which are imprinted lots of funny dark squiggles. But one glance at it and you're inside the mind of another person, maybe somebody dead for thousands of years. Across the millennia, an author is speaking clearly and silently inside your head, directly to you. Writing is perhaps the greatest of human inventions, binding together people who never knew each other, citizens of distant epochs. Books break the shackles of time. A book is proof that humans are capable of working magic.
+>
+> -- Carl Sagan, Cosmos, Part 11: The Persistence of Memory (1980)
+
+## Books that I am reading, have read, or will read
+```
 
 ## Adicionando Token para o Lighthouse Badger
 

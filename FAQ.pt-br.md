@@ -4,6 +4,8 @@ Aqui estão algumas perguntas frequentes. Se você tiver uma pergunta diferente,
 
 Se sua questão estiver relacionada à localização, verifique se ela já não foi respondida na seção de Perguntas & Respostas das [Discussões do GitHub](https://github.com/george-gca/multi-language-al-folio/discussions/categories/q-a). Se não, fique à vontade para perguntar algo novo por lá.
 
+<!--ts-->
+
 - [Perguntas Frequentes](#perguntas-frequentes)
   - [Após criar um novo repositório a partir deste template e configurar o repositório, recebo um erro de implantação. O site não deveria ser implantado automaticamente de forma correta?](#após-criar-um-novo-repositório-a-partir-deste-template-e-configurar-o-repositório-recebo-um-erro-de-implantação-o-site-não-deveria-ser-implantado-automaticamente-de-forma-correta)
   - [Estou usando um domínio personalizado (por exemplo, `foo.com`). Meu domínio personalizado fica em branco nas configurações do repositório após cada implantação. Como posso resolver isso?](#estou-usando-um-domínio-personalizado-por-exemplo-foocom-meu-domínio-personalizado-fica-em-branco-nas-configurações-do-repositório-após-cada-implantação-como-posso-resolver-isso)
@@ -21,28 +23,27 @@ Se sua questão estiver relacionada à localização, verifique se ela já não 
   - [Como posso atualizar a versão do Tabler Icons no template](#como-posso-atualizar-a-versão-do-tabler-icons-no-template)
   - [O que significam todas essas ações/workflows do GitHub?](#o-que-significam-todas-essas-açõesworkflows-do-github)
   - [Como posso usar o ID do Google Search Console no template?](#como-posso-usar-o-id-do-google-search-console-no-template)
+  - [O que são Code Wiki e DeepWiki?](#o-que-são-code-wiki-e-deepwiki)
+    - [Quando usar essas ferramentas](#quando-usar-essas-ferramentas)
+    - [O que eles fazem](#o-que-eles-fazem)
+    - [Limitações](#limitações)
+    - [Acesse essas ferramentas](#acesse-essas-ferramentas)
 
----
+<!--te-->
 
-### Após criar um novo repositório a partir deste template e configurar o repositório, recebo um erro de implantação. O site não deveria ser implantado automaticamente de forma correta?
+## Após criar um novo repositório a partir deste template e configurar o repositório, recebo um erro de implantação. O site não deveria ser implantado automaticamente de forma correta?
 
 Sim, se você estiver usando a versão `v0.3.5` ou superior, o site será automaticamente e corretamente reimplantado logo após o seu primeiro commit. Faça algumas alterações (por exemplo, altere as informações do seu site em `_config.yml`), faça um commit e envie (push). Certifique-se de seguir as [instruções de implantação](https://github.com/alshedivat/al-folio#deployment). (Issue relevante: [209](https://github.com/alshedivat/al-folio/issues/209#issuecomment-798849211).)
 
----
-
-### Estou usando um domínio personalizado (por exemplo, `foo.com`). Meu domínio personalizado fica em branco nas configurações do repositório após cada implantação. Como posso resolver isso?
+## Estou usando um domínio personalizado (por exemplo, `foo.com`). Meu domínio personalizado fica em branco nas configurações do repositório após cada implantação. Como posso resolver isso?
 
 Você precisa adicionar um arquivo chamado `CNAME` na branch `main` ou `source` do seu repositório. Esse arquivo deve conter o seu domínio personalizado. (Issue relevante: [130](https://github.com/alshedivat/al-folio/issues/130).)
 
----
-
-### Minha página funciona localmente, mas após a implantação ela não é construída e lança o erro `Unknown tag 'toc'`. Como posso resolver isso?
+## Minha página funciona localmente, mas após a implantação ela não é construída e lança o erro `Unknown tag 'toc'`. Como posso resolver isso?
 
 Certifique-se de ter seguido corretamente as [instruções de implantação](#deployment) na seção anterior. Você deve ter configurado a branch de implantação como `gh-pages`. (Issue relacionada: [1438](https://github.com/alshedivat/al-folio/issues/1438).)
 
----
-
-### Minha página funciona localmente, mas após a implantação ela não é exibida corretamente (CSS e JS não são carregados adequadamente). Como posso resolver isso?
+## Minha página funciona localmente, mas após a implantação ela não é exibida corretamente (CSS e JS não são carregados adequadamente). Como posso resolver isso?
 
 Se o site não carrega o tema, o layout fica desorganizado e todos os links estão quebrados, apresentando a página principal desta forma:
 
@@ -54,33 +55,23 @@ verifique se os caminhos `url` e `baseurl` estão especificados corretamente no 
 - limpar o histórico do navegador;
 - ou simplesmente tentar em uma sessão privativa, como explicado em [Chrome](https://support.google.com/chrome/answer/95464) e [Firefox](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
 
----
-
-### O feed Atom não funciona. Por quê?
+## O feed Atom não funciona. Por quê?
 
 Certifique-se de especificar corretamente os campos `url` e `baseurl` no `_config.yml`. O plugin de feed RSS funciona com os campos `title`, `url`, `description` e `author` configurados de forma adequada. Preencha-os corretamente e tente novamente.
 
----
-
-### Meu site não funciona quando habilito `related_blog_posts`. Por quê?
+## Meu site não funciona quando habilito `related_blog_posts`. Por quê?
 
 Isso provavelmente se deve ao plugin [classifier reborn](https://github.com/jekyll/classifier-reborn), que é utilizado para calcular posts relacionados. Se o erro indicar `Liquid Exception: Zero vectors can not be normalized...` ou `sqrt': Numerical argument is out of domain - "sqrt"`, significa que não foi possível calcular posts relacionados para um post em específico. Geralmente isso acontece por causa de posts vazios ou mínimos (por exemplo, contendo apenas palavras irrelevantes ou somente [stop words](https://en.wikipedia.org/wiki/Stop_words)) ou até devido a [caracteres específicos](https://github.com/jekyll/classifier-reborn/issues/194) usados em seus posts. Além disso, o cálculo dos posts similares é feito para toda página usando `layout: post`, incluindo anúncios. Para alterar esse comportamento, basta adicionar `related_posts: false` no front matter da página que você não deseja exibir posts relacionados. Outra solução é desativar completamente o LSI (latent semantic indexing) definindo a flag `lsi` como `false` no `_config.yml`. (Issue relacionada: [#1828](https://github.com/alshedivat/al-folio/issues/1828).)
 
----
-
-### Ao tentar implantar, ele solicita credenciais de login do GitHub, mas o GitHub desativou a autenticação por senha e o processo é encerrado com erro. Como posso corrigir isso?
+## Ao tentar implantar, ele solicita credenciais de login do GitHub, mas o GitHub desativou a autenticação por senha e o processo é encerrado com erro. Como posso corrigir isso?
 
 Abra o arquivo `.git/config` com o seu editor preferido. Altere a parte que diz `https` na URL para `ssh`. Em seguida, tente implantar novamente.
 
----
-
-### Quando executo manualmente o workflow do Lighthouse Badger, ele falha com `Error: Input required and not supplied: token`. Como posso corrigir isso?
+## Quando executo manualmente o workflow do Lighthouse Badger, ele falha com `Error: Input required and not supplied: token`. Como posso corrigir isso?
 
 Você precisa [criar um token de acesso pessoal (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) e adicioná-lo como um secret chamado `LIGHTHOUSE_BADGER_TOKEN` no seu repositório. Para mais informações, consulte a [documentação do Lighthouse Badger](https://github.com/MyActionWay/lighthouse-badger-workflows#lighthouse-badger-easyyml).
 
----
-
-### Meu código funciona bem localmente, mas quando crio um commit e o envio, ele falha com `prettier code formatter workflow run failed for main branch`. Como posso resolver isso?
+## Meu código funciona bem localmente, mas quando crio um commit e o envio, ele falha com `prettier code formatter workflow run failed for main branch`. Como posso resolver isso?
 
 Implementamos suporte para [formatação de código com Prettier](https://prettier.io/) em [#2048](https://github.com/alshedivat/al-folio/pull/2048). Isso basicamente garante que seu código esteja [bem formatado](https://prettier.io/docs/en/). Para garantir que seu código esteja em conformidade com o Prettier, você tem algumas opções:
 
@@ -90,9 +81,7 @@ Implementamos suporte para [formatação de código com Prettier](https://pretti
 
 Você também pode desativá-lo para o seu repositório, bastando remover o arquivo [.github/workflows/prettier.yml](https://github.com/alshedivat/al-folio/blob/main/.github/workflows/prettier.yml).
 
----
-
-### Após atualizar meu site com novo conteúdo, mesmo com uma pequena mudança, a ação do GitHub lança um erro ou exibe um aviso. O que aconteceu?
+## Após atualizar meu site com novo conteúdo, mesmo com uma pequena mudança, a ação do GitHub lança um erro ou exibe um aviso. O que aconteceu?
 
 Provavelmente, o workflow do GitHub está lançando um erro como por exemplo:
 
@@ -113,31 +102,23 @@ Se isso ocorrer, significa que você está utilizando bibliotecas/comandos depre
 
 Note que as bibliotecas tendem a ser depreciadas e o suporte a elas é interrompido, pois não são mais mantidas, e continuar usando-as envolve brechas de segurança. Além disso, algumas dessas desativações são impostas, por exemplo, pelo próprio GitHub, então há um limite para o que podemos fazer. Também adicionamos muitas novas funcionalidades, além de organizar as coisas e melhorar a velocidade e estrutura geral, então você também pode se beneficiar dessas melhorias.
 
-### Estou tentando implantar meu site, mas falha com `Could not find gem 'jekyll-diagrams' in locally installed gems`. Como resolvo isso?
+## Estou tentando implantar meu site, mas falha com `Could not find gem 'jekyll-diagrams' in locally installed gems`. Como resolvo isso?
 
 O suporte ao `jekyll-diagrams` foi descontinuado em [#1992](https://github.com/alshedivat/al-folio/pull/1992) em favor do uso direto do `mermaid.js`. Basta [atualizar seu código](INSTALL.md#upgrading-from-a-previous-version) para obter as alterações mais recentes.
 
----
-
-### Como posso atualizar a versão do Academicons no template
+## Como posso atualizar a versão do Academicons no template
 
 Para atualizar a versão do Academicons, você precisa baixar a versão mais recente no [site do Academicons](https://jpswalsh.github.io/academicons/). Após o download, extraia o arquivo zip e copie os arquivos `academicons.ttf` e `academicons.woff` da pasta `fonts/` para `assets/fonts/` e o arquivo `academicons.min.css` da pasta `css/` para `assets/css/`.
 
----
-
-### Como posso atualizar a versão do Font Awesome no template
+## Como posso atualizar a versão do Font Awesome no template
 
 Para atualizar a versão do Font Awesome, você precisa baixar a versão mais recente "for the web" no [site do Font Awesome](https://fontawesome.com/download). Após o download, extraia o conteúdo da pasta `scss/` para `_sass/font-awesome/` e o conteúdo da pasta `webfonts/` para `assets/webfonts/`.
 
----
-
-### Como posso atualizar a versão do Tabler Icons no template
+## Como posso atualizar a versão do Tabler Icons no template
 
 Para atualizar a versão do Tabler Icons, você precisa baixar a versão mais recente no [site do Tabler Icons](https://tabler.io/icons). Após o download, extraia o arquivo zip e copie os arquivos `tabler-icons-filled.scss`, `tabler-icons-outline.scss` e `tabler-icons.scss` da pasta `webfont/` para `_sass/tabler-icons/`, e todos os arquivos da pasta `webfont/fonts/` para `assets/fonts/`.
 
----
-
-### O que significam todas essas ações/workflows do GitHub?
+## O que significam todas essas ações/workflows do GitHub?
 
 As ações do GitHub são uma forma de automatizar tarefas no repositório. Elas são definidas no diretório `.github/workflows/`. Cada arquivo nesse diretório é um workflow. Os workflows são compostos por um ou mais jobs, e cada job é executado em uma máquina virtual hospedada pelo GitHub. Você pode verificar o status dos workflows na aba `Actions` do seu repositório. Para mais informações, consulte a [documentação do GitHub Actions](https://docs.github.com/en/actions).
 
@@ -154,9 +135,7 @@ Atualmente, temos os seguintes workflows:
 - `prettier-comment-on-pr.yml`: não está funcionando. Por enquanto, essa ação está desabilitada. Ela deveria executar o [Prettier](https://prettier.io/) nos PRs e comentar as mudanças necessárias. Para mais informações, veja a [issue 2115](https://github.com/alshedivat/al-folio/issues/2115).
 - `prettier.yml`: executa o [Prettier](https://prettier.io/) no código para garantir que esteja bem formatado. Para mais informações, consulte nossa [FAQ a respeito](https://github.com/alshedivat/al-folio/blob/main/FAQ.md#my-code-runs-fine-locally-but-when-i-create-a-commit-and-submit-it-it-fails-with-prettier-code-formatter-workflow-run-failed-for-main-branch-how-do-i-fix-that).
 
----
-
-### Como posso usar o ID do Google Search Console no template?
+## Como posso usar o ID do Google Search Console no template?
 
 No arquivo de configuração `_config.yml`, a tag `google-site-verification` deve ser atualizada para utilizar essa funcionalidade. Veja como proceder:
 
@@ -166,50 +145,11 @@ No arquivo de configuração `_config.yml`, a tag `google-site-verification` dev
 
 Note que a verificação do tipo de Domínio no Google Search Console, para verificar a propriedade de todas as URLs em todos os subdomínios com o GitHub Pages, não funciona.
 
----
-
-### Como posso atualizar a versão do Academicons no modelo
-
-Para atualizar a versão do Academicons, você precisa baixar a versão mais recente do [site do Academicons](https://jpswalsh.github.io/academicons/). Após baixar, extraia o arquivo zip e copie os arquivos `academicons.ttf` e `academicons.woff` do diretório `fonts/` para `assets/fonts/` e o arquivo `academicons.min.css` do diretório `css/` para `assets/css/`.
-
----
-
-### Como posso atualizar a versão do Font Awesome no modelo
-
-Para atualizar a versão do Font Awesome, você precisa baixar a versão mais recente "para a web" do [site do Font Awesome](https://fontawesome.com/download). Após baixar, extraia o arquivo zip e copie o conteúdo do diretório `scss/` para `_sass/font-awesome/` e o conteúdo de `webfonts/` para `assets/webfonts/`.
-
----
-
-### Como posso atualizar a versão do Tabler Icons no modelo
-
-Para atualizar a versão do Tabler Icons, você precisa baixar a versão mais recente do [site do Tabler Icons](https://tabler.io/icons). Após baixar, extraia o arquivo zip e copie os arquivos `tabler-icons-filled.scss`, `tabler-icons-outline.scss` e `tabler-icons.scss` do diretório `webfont/` para `_sass/tabler-icons/`, e todos os arquivos de `webfont/fonts/` para `assets/fonts/`.
-
----
-
-### O que significam todos esses GitHub actions/workflows?
-
-As ações GitHub são uma forma de automatizar tarefas no repositório. Elas são definidas no diretório `.github/workflows/`. Cada arquivo neste diretório é um fluxo de trabalho. Os fluxos de trabalho são compostos por um ou mais trabalhos, e cada trabalho é executado em uma máquina virtual hospedada pelo GitHub. Você pode ver o status dos fluxos de trabalho na aba `Actions` do seu repositório. Para mais informações, consulte a [documentação do GitHub Actions](https://docs.github.com/en/actions).
-
-Atualmente temos os seguintes fluxos de trabalho:
-
-- `axe.yml`: faz alguns testes de acessibilidade em seu site. Ele usa a ferramenta [axe cli](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/cli) com um driver chrome para renderizar a página da web e permitir a análise. Deve ser executado manualmente, pois corrigir alguns dos problemas não é direto
-- `broken-links-site.yml`: verifica se há links quebrados em seu site construído com o [lychee-action](https://github.com/lycheeverse/lychee-action)
-- `broken-links.yml`: verifica se há links quebrados em seu repositório com o [lychee-action](https://github.com/lycheeverse/lychee-action)
-- `deploy-docker-tag.yml`: adiciona alguns metadados à imagem docker e a envia para Docker Hub
-- `deploy-image.yml`: implanta uma nova imagem docker com as alterações mais recentes para Docker Hub
-- `deploy.yml`: implanta o site no GitHub Pages
-- `docker-slim.yml`: implanta uma versão menor da imagem docker para Docker Hub com o [docker-slim-action](https://github.com/kitabisa/docker-slim-action)
-- `lighthouse-badger.yml`: executa um teste [lighthouse](https://github.com/GoogleChrome/lighthouse) para seu site com o [lighthouse-badger-action](https://github.com/MyActionWay/lighthouse-badger-action), salvando os resultados no repositório para fácil inspeção, como pode ser visto [aqui](https://github.com/alshedivat/al-folio?tab=readme-ov-file#lighthouse-pagespeed-insights). Para mais informações sobre como ativar este fluxo de trabalho, consulte nossa [pergunta de FAQ sobre isso](https://github.com/alshedivat/al-folio/blob/main/FAQ.md#when-i-manually-run-the-lighthouse-badger-workflow-it-fails-with-error-input-required-and-not-supplied-token-how-do-i-fix-that)
-- `prettier-comment-on-pr.yml`: não funciona. Por enquanto, esta ação está desativada. Era para executar prettier nos PRs e comentar neles com as alterações necessárias. Para mais informações, consulte [issue 2115](https://github.com/alshedivat/al-folio/issues/2115)
-- `prettier.yml`: executa [prettier](https://prettier.io/) no código para garantir que esteja bem formatado. Para mais informações, consulte nossa [pergunta de FAQ sobre isso](https://github.com/alshedivat/al-folio/blob/main/FAQ.md#my-code-runs-fine-locally-but-when-i-create-a-commit-and-submit-it-it-fails-with-prettier-code-formatter-workflow-run-failed-for-main-branch-how-do-i-fix-that)
-
----
-
-### O que são Code Wiki e DeepWiki?
+## O que são Code Wiki e DeepWiki?
 
 **Code Wiki** e **DeepWiki** são ferramentas alimentadas por IA que ajudam você a entender repositórios GitHub através de documentação interativa. Elas devem ser tratadas como recursos complementares quando você não consegue encontrar as informações de que precisa na documentação oficial do projeto.
 
-#### Quando usar essas ferramentas
+### Quando usar essas ferramentas
 
 **Use Code Wiki e DeepWiki apenas depois** de:
 
@@ -217,7 +157,7 @@ Atualmente temos os seguintes fluxos de trabalho:
 - Você ter verificado a [seção de Q&A das Discussões do GitHub](https://github.com/alshedivat/al-folio/discussions/categories/q-a) para perguntas semelhantes
 - Você ter pesquisado [Issues do GitHub](https://github.com/alshedivat/al-folio/issues) existentes
 
-#### O que eles fazem
+### O que eles fazem
 
 **Code Wiki** (alimentado por Google Gemini) gera documentação interativa a partir do código do seu repositório. Ele permite que você:
 
@@ -232,11 +172,11 @@ Atualmente temos os seguintes fluxos de trabalho:
 - Obtenha respostas instantâneas sobre como recursos específicos funcionam
 - Pesquise padrões de código e implementações
 
-#### Limitações
+### Limitações
 
 Essas ferramentas são geradas automaticamente a partir do nosso código e podem não refletir sempre os padrões de documentação mais atuais ou as melhores práticas específicas deste projeto. Elas não devem substituir a documentação oficial, mas sim complementá-la quando você precisar de insights técnicos mais profundos.
 
-#### Acesse essas ferramentas
+### Acesse essas ferramentas
 
 - **Code Wiki**: [Code Wiki for al-folio](https://codewiki.google/github.com/george-gca/multi-language-al-folio)
 - **DeepWiki**: [DeepWiki for al-folio](https://deepwiki.com/george-gca/multi-language-al-folio)

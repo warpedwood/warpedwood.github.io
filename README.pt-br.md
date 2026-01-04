@@ -22,6 +22,9 @@
 [![Estrelas no GitHub](https://img.shields.io/github/stars/george-gca/multi-language-al-folio)](https://github.com/george-gca/multi-language-al-folio)
 [![Forks no GitHub](https://img.shields.io/github/forks/george-gca/multi-language-al-folio)](https://github.com/george-gca/multi-language-al-folio/fork)
 
+[![Code Wiki](https://img.shields.io/badge/Code_Wiki-ask_about_repo-blue?logo=googlegemini)](https://codewiki.google/github.com/george-gca/multi-language-al-folio)
+[![DeepWiki](https://img.shields.io/badge/DeepWiki-ask_about_repo-lightcyan)](https://deepwiki.com/george-gca/multi-language-al-folio)
+
 [![en-us](https://img.shields.io/badge/read_me-en--us-blue.svg)](README.md)
 
 </div>
@@ -49,6 +52,8 @@ Execute o teste você mesmo: [Google Lighthouse PageSpeed Insights](https://page
 
 ## Índice
 
+<!--ts-->
+
 - [multi-language-al-folio](#multi-language-al-folio)
   - [Comunidade de Usuários](#comunidade-de-usuários)
   - [Lighthouse PageSpeed Insights](#lighthouse-pagespeed-insights)
@@ -58,6 +63,9 @@ Execute o teste você mesmo: [Google Lighthouse PageSpeed Insights](https://page
   - [Começando](#começando)
   - [Instalação e Implantação](#instalação-e-implantação)
   - [Personalizando](#personalizando)
+  - [Agentes do GitHub Copilot](#agentes-do-github-copilot)
+    - [Agente de Personalização](#agente-de-personalização)
+    - [Agente de Documentação](#agente-de-documentação)
   - [Recursos](#recursos)
     - [Suporte Multilíngue](#suporte-multilíngue)
     - [Modo Claro/Escuro](#modo-claroescuro)
@@ -71,6 +79,19 @@ Execute o teste você mesmo: [Google Lighthouse PageSpeed Insights](https://page
       - [Fotos, Áudio, Vídeo e mais](#fotos-áudio-vídeo-e-mais)
     - [Outros recursos](#outros-recursos)
       - [Repositórios do GitHub e estatísticas do usuário](#repositórios-do-github-e-estatísticas-do-usuário)
+      - [Temas](#temas)
+      - [Visualizações de mídia social](#visualizações-de-mídia-social)
+      - [Feed Atom (semelhante a RSS)](#feed-atom-semelhante-a-rss)
+      - [Postagens relacionadas](#postagens-relacionadas)
+      - [Verificações de qualidade de código](#verificações-de-qualidade-de-código)
+  - [Perguntas Frequentes](#perguntas-frequentes)
+  - [Contribuindo](#contribuindo)
+    - [Mantenedores](#mantenedores)
+    - [Todos os Colaboradores](#todos-os-colaboradores)
+  - [Histórico de Estrelas](#histórico-de-estrelas)
+  - [Licença](#licença)
+
+<!--te-->
 
 ## Começando
 
@@ -85,6 +106,34 @@ Para detalhes de instalação e implantação, consulte [INSTALL.md](INSTALL.pt-
 ## Personalizando
 
 Para detalhes de personalização, consulte [CUSTOMIZE.md](CUSTOMIZE.pt-br.md).
+
+## Agentes do GitHub Copilot
+
+Este repositório inclui dois agentes especializados do GitHub Copilot para melhorar sua experiência de desenvolvimento:
+
+### Agente de Personalização
+
+O **Agente de Personalização** ajuda você a personalizar seu site al-folio, oferecendo:
+
+- Orientação passo a passo para alterações de configuração
+- Modificação direta de arquivos em seu repositório
+- Explicação de conceitos técnicos em linguagem simples (ótimo para usuários sem experiência em programação)
+- Assistência com tarefas comuns, como atualizar seu CV, adicionar publicações, criar postagens de blog e personalizar temas
+
+Consulte [CUSTOMIZE.md § Agente de Personalização do GitHub Copilot](CUSTOMIZE.pt-br.md#Agente-de-Personalização-GitHub-Copilot) para obter instruções detalhadas de uso.
+
+### Agente de Documentação
+
+O **Agente de Documentação** mantém a documentação do projeto clara e atualizada, realizando:
+
+- Atualização de arquivos de documentação quando os recursos mudam
+- Redação em um estilo acessível para acadêmicos e pesquisadores
+- Manutenção da sincronização da documentação com a base de código
+- Seguindo as melhores práticas de documentação
+
+Consulte [CONTRIBUTING.md § Agentes do GitHub Copilot](CONTRIBUTING.pt-br.md#Agentes-do-GitHub-Copilot) para obter mais informações.
+
+> **Requisitos:** Ambos os agentes exigem uma assinatura do [GitHub Copilot](https://github.com/features/copilot). Para mais informações sobre o GitHub Copilot e como usar agentes, consulte a [documentação do GitHub Copilot](https://docs.github.com/en/copilot).
 
 ## Recursos
 
@@ -287,34 +336,6 @@ Atualmente, executamos algumas verificações para garantir que a qualidade do c
 - [Axe](https://github.com/dequelabs/axe-core) (necessário executar manualmente) - fazer testes de acessibilidade
 
 Decidimos manter as execuções do `Axe` manuais porque corrigir os problemas não é direto e pode ser difícil para pessoas sem conhecimento de desenvolvimento web.
-
-## Agentes GitHub Copilot
-
-Este repositório inclui dois agentes GitHub Copilot especializados para aprimorar sua experiência de desenvolvimento:
-
-### Agente de Personalização
-
-O **Agente de Personalização** ajuda você a personalizar seu site al-folio por:
-
-- Orientá-lo através de mudanças de configuração passo a passo
-- Modificar arquivos diretamente em seu repositório
-- Explicar conceitos técnicos em linguagem simples (ótimo para usuários sem experiência em programação)
-- Auxiliar em tarefas comuns como atualizar seu CV, adicionar publicações, criar postagens de blog e personalizar temas
-
-Veja [CUSTOMIZE.md § Agente de Personalização GitHub Copilot](CUSTOMIZE.pt-br.md#agente-de-personalização-github-copilot) para instruções de uso detalhadas.
-
-### Agente de Documentação
-
-O **Agente de Documentação** mantém a documentação do projeto clara e atualizada por:
-
-- Atualizar arquivos de documentação quando recursos mudam
-- Escrever em um estilo acessível para acadêmicos e pesquisadores
-- Manter a documentação sincronizada com a base de código
-- Seguir as melhores práticas de documentação
-
-Veja [CONTRIBUTING.md § Agentes GitHub Copilot](CONTRIBUTING.pt-br.md#agentes-github-copilot) para mais informações.
-
-> **Requisitos:** Ambos os agentes requerem uma assinatura de [GitHub Copilot](https://github.com/features/copilot). Para mais informações sobre o GitHub Copilot e como usar agentes, veja a [documentação do GitHub Copilot](https://docs.github.com/en/copilot).
 
 ## Perguntas Frequentes
 
