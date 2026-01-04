@@ -266,7 +266,7 @@ Run the test yourself: [Google Lighthouse PageSpeed Insights](https://pagespeed.
     - [Collections](#collections)
     - [Layouts](#layouts)
       - [The iconic style of Distill](#the-iconic-style-of-distill)
-      - [Full support for math &amp; code](#full-support-for-math--code)
+      - [Full support for math \& code](#full-support-for-math--code)
       - [Photos, Audio, Video and more](#photos-audio-video-and-more)
     - [Other features](#other-features)
       - [GitHub's repositories and user stats](#githubs-repositories-and-user-stats)
@@ -524,8 +524,8 @@ Our most active contributors are welcome to join the maintainers team. If you ar
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="http://maruan.alshedivat.com"><img src="https://avatars.githubusercontent.com/u/2126561?v=4" width="100px;" alt=""/><br /><sub><b>Maruan</b></sub></a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://rohandebsarkar.github.io"><img src="https://avatars.githubusercontent.com/u/50144004?v=4" width="100px;" alt=""/><br /><sub><b>Rohan Deb Sarkar</b></sub></a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://maruan.alshedivat.com"><img src="https://avatars.githubusercontent.com/u/2126561?v=4" width="100px;" alt=""/><br /><sub><b>Maruan</b></sub></a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://rohandebsarkar.github.io"><img src="https://avatars.githubusercontent.com/u/50144004?v=4" width="100px;" alt=""/><br /><sub><b>Rohan Deb Sarkar</b></sub></a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://amirpourmand.ir"><img src="https://avatars.githubusercontent.com/u/32064808?v=4" width="100px;" alt=""/><br /><sub><b>Amir Pourmand</b></sub></a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://george-gca.github.io/"><img src="https://avatars.githubusercontent.com/u/31376482?v=4" width="100px;" alt=""/><br /><sub><b>George</b></sub></a></td>
     </tr>
