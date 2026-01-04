@@ -465,7 +465,7 @@ third_party_libraries:
 - `download`: Quando `false` (padrão), as bibliotecas são carregadas de CDNs. Quando `true`, as versões especificadas da biblioteca são baixadas durante a construção e servidas a partir do seu site. Isso pode melhorar o desempenho, mas aumenta o tamanho do seu repositório.
 - `version`: Especifica qual versão de cada biblioteca usar. Atualize isso para usar uma versão mais recente.
 - `url`: URLs de modelo para carregar a biblioteca. O placeholder `{{version}}` é substituído pelo número da versão.
-- `integrity`: Hashes de [Subresource Integrity (SRI)](https://developer.mozilla.org/pt-BR/docs/Web/Security/Subresource_Integrity) garantem que a biblioteca não foi adulterada. Ao atualizar uma versão de biblioteca, você também deve atualizar seu hash de integridade.
+- `integrity`: Hashes de [Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) garantem que a biblioteca não foi adulterada. Ao atualizar uma versão de biblioteca, você também deve atualizar seu hash de integridade.
 
 Para atualizar uma biblioteca:
 
