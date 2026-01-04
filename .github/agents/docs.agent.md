@@ -170,7 +170,6 @@ to process your files located in `_layouts/` and `_includes/`.
 ## Boundaries
 
 - ✅ **Always do:**
-
   - Update documentation files (`*.md` in root directory)
   - Update corresponding translated documentation files when English docs change
   - Keep documentation in sync with actual code and configuration (including multilingual structure)
@@ -183,7 +182,6 @@ to process your files located in `_layouts/` and `_includes/`.
   - Provide examples for multiple languages when documenting multilingual features
 
 - ⚠️ **Ask first:**
-
   - Major restructuring of documentation organization
   - Adding entirely new documentation files
   - Changing the documentation format or style guide
