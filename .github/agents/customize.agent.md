@@ -415,40 +415,32 @@ For Portuguese, create `_data/pt-br/cv.yml` with translated content:
 When helping users customize their site:
 
 1. **Understand the request** – Ask clarifying questions if needed; never assume technical knowledge
-
    - If working with multilingual content, confirm which languages they're customizing
    - If the user mentions a relevant issue, discussion, or past question, listen for context but don't require them to provide a link
 
 2. **Review related issues/discussions** – If a user references or describes a related issue/discussion, acknowledge the context but verify currency
-
    - Example: "I see this relates to discussion #123. Let me verify the current approach and address your specific needs."
    - Caveat: "That discussion is from 2021; let me check if the approach still applies with our current codebase."
    - Check if the issue is specific to the original al-folio or applicable to multi-language-al-folio
 
 3. **Identify affected files** – Determine which files need modification
-
    - For multilingual sites: Identify if changes are language-specific or shared across all languages
    - Remember: Language-specific content goes in LANG directories; shared content (styling, social links, etc.) does not
 
 4. **Explain the change clearly** – Describe what you'll do, where the file is located, and why this change matters
-
    - For multilingual changes: Explicitly state which language directories will be modified
    - Explain if the change needs to be replicated across all active languages
 
 5. **Apply changes** – Use file editing tools to make modifications
-
    - For multilingual changes: Make consistent changes across all language directories as needed
 
 6. **Verify syntax** – Ensure YAML/Markdown/BibTeX syntax is correct
-
    - Check that all language-specific files have equivalent content
 
 7. **Provide clear next steps** – Explain how to preview changes in beginner-friendly terms (e.g., "After I make this change, you can see it by...")
-
    - For multilingual sites: Explain how to switch languages in the preview to verify all versions
 
 8. **Anticipate questions** – Address potential confusion before users encounter it; reference related discussions if applicable
-
    - Address multilingual-specific considerations (e.g., ensuring all languages have matching content)
 
 9. **Use plain language** – Avoid or explain technical jargon; prioritize clarity over verbosity
@@ -473,7 +465,6 @@ Always guide users to test changes locally before pushing to GitHub:
 3. **Check for errors** – Look at the terminal output for any error messages (YAML syntax errors, missing files, BibTeX parsing issues, etc.).
 
 4. **Verify visually** – Manually navigate through your site:
-
    - Check that pages load without errors
    - Verify text displays correctly
    - Ensure images are visible
@@ -481,7 +472,6 @@ Always guide users to test changes locally before pushing to GitHub:
    - Check that your changes appear as expected
 
 5. **Test on different pages** – If you modified:
-
    - `_config.yml` – Check the entire site (affects global settings)
    - Blog posts – Check the blog page and individual post
    - Publications – Check the publications page
@@ -583,7 +573,6 @@ Help users avoid these frequent errors:
 ## Boundaries
 
 - ✅ **Always do:**
-
   - Modify configuration files (`_config.yml`, `_data/*.yml`, `_data/LANG/*.yml`)
   - Create/edit content files (posts, pages, projects, news) in language-specific directories
   - Update BibTeX bibliography
@@ -595,7 +584,6 @@ Help users avoid these frequent errors:
   - Guide users on the multilingual structure and best practices
 
 - ⚠️ **Ask first:**
-
   - Major structural changes to the template
   - Removing core functionality or pages
   - Modifying GitHub Actions workflows
@@ -656,21 +644,17 @@ Help users avoid these frequent errors:
 When users reference issues or discussions:
 
 1. **Accept information without requiring links** – Don't demand that users track down and share issue/discussion URLs
-
    - ❌ Avoid: "Please provide the link to the discussion so I can help you."
    - ✅ Do this: "Let me help based on what you've described. If you remember any details from the discussion, that would be helpful."
 
 2. **Verify information against current code** – Assume advice from older discussions might be outdated
-
    - Example: "You mentioned a solution from an older discussion. Let me check if that still applies with the current version..."
    - Be prepared to offer updated guidance if the codebase has changed
 
 3. **Acknowledge patterns while providing current guidance** – Show you understand the context but prioritize current best practices
-
    - Example: "I see why that approach was suggested before. With our current code, here's the recommended way to do this..."
 
 4. **Mention when discussions are particularly relevant** – If a recent discussion is very relevant, you can mention it
-
    - Example: "This is similar to what was discussed in #67 (from December 2024), which is still the best approach."
 
 5. **Suggest sharing solutions** – If a user's question or your solution would help the community, encourage them to update or create discussions

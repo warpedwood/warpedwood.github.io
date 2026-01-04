@@ -221,7 +221,6 @@ Entender a pilha de tecnologia do al-folio o ajudará a personalizar e estender 
 ### Backend
 
 - **Jekyll 4.x**: [Jekyll](https://jekyllrb.com/) é um gerador de site estático escrito em Ruby que transforma seus arquivos Markdown e modelos em um site estático. O Jekyll é usado para:
-
   - Converter arquivos Markdown em HTML
   - Processar modelos Liquid
   - Gerenciar coleções (postagens, projetos, notícias, livros, etc.)
@@ -229,7 +228,6 @@ Entender a pilha de tecnologia do al-folio o ajudará a personalizar e estender 
   - Minificar CSS e JavaScript
 
 - **Ruby Gems** (Plugins Jekyll): O projeto usa vários plugins Ruby para estender a funcionalidade do Jekyll:
-
   - `jekyll-scholar`: Gerencia arquivos de bibliografia (BibTeX) e gera páginas de publicações com citações
   - `jekyll-archives-v2`: Cria páginas de arquivo para postagens e coleções organizadas por categoria, tag ou data
   - `jekyll-paginate-v2`: Lida com paginação para postagens de blog e arquivos
@@ -247,7 +245,6 @@ Entender a pilha de tecnologia do al-folio o ajudará a personalizar e estender 
 ### Construção e Implantação
 
 - **GitHub Actions**: Fluxos de trabalho automatizados para construir, testar e implantar seu site. Os fluxos de trabalho estão definidos em `.github/workflows/`:
-
   - **Deploy**: Constrói e implanta automaticamente seu site no GitHub Pages quando você faz push de alterações para o branch principal
   - **Verificação de links**: Valida que todos os links do seu site não estão quebrados
   - **Formatação de código**: Garante que o código segue o estilo de código do Prettier
@@ -471,7 +468,6 @@ Para atualizar uma biblioteca:
 
 1. Altere o número da `version`
 2. Obtenha o novo hash de integridade para a versão atualizada da biblioteca e atualize o campo `integrity` com o novo hash. Você pode:
-
    - Verificar se o provedor de CDN (por exemplo, jsDelivr, cdnjs, unpkg) fornece o hash SRI para o arquivo. Muitos sites de CDN exibem o hash SRI junto da URL do arquivo.
    - Gerar o hash SRI você mesmo usando uma ferramenta como [SRI Hash Generator](https://www.srihash.org/) ou executando o seguinte comando em seu terminal:
 
@@ -481,7 +477,6 @@ Para atualizar uma biblioteca:
 
      Substitua `[FILE_URL]` pela URL do arquivo da biblioteca. Em seguida, adicione `sha384-` ao resultado e use-o no campo `integrity`.
      Para instruções detalhadas sobre como atualizar bibliotecas específicas, veja as Perguntas Frequentes:
-
      - [Como posso atualizar a versão do Academicons](FAQ.pt-br.md#como-posso-atualizar-a-versão-do-academicons-no-modelo)
      - [Como posso atualizar a versão do Font Awesome](FAQ.pt-br.md#como-posso-atualizar-a-versão-do-font-awesome-no-modelo)
      - [Como posso atualizar a versão do Tabler Icons](FAQ.pt-br.md#como-posso-atualizar-a-versão-do-tabler-icons-no-modelo)
@@ -664,7 +659,6 @@ O GitHub restringe o `GITHUB_TOKEN` padrão de acionar outros fluxos de trabalho
 ### Como configurar o PAT
 
 1. **Crie um Personal Access Token**
-
    - Vá para [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens).
    - Clique em "Generate new token" (clássico ou fine-grained).
    - Conceda pelo menos as seguintes permissões:
@@ -672,7 +666,6 @@ O GitHub restringe o `GITHUB_TOKEN` padrão de acionar outros fluxos de trabalho
    - Salve o token em algum lugar seguro.
 
 2. **Adicione o PAT como um secret do repositório**
-
    - Vá para seu repositório no GitHub.
    - Navegue até `Settings` > `Secrets and variables` > `Actions` > `New repository secret`.
    - Nomeie o secret como `PAT` (deve corresponder ao nome usado no fluxo de trabalho).
