@@ -30,6 +30,9 @@ Note que, ao longo dos arquivos [README.md](README.pt-br.md) e [CUSTOMIZE.md](CU
   - [Criando novos projetos](#criando-novos-projetos)
   - [Adicionando algumas notícias](#adicionando-algumas-notícias)
   - [Adicionando Coleções](#adicionando-coleções)
+    - [Criando uma nova coleção](#criando-uma-nova-coleção)
+    - [Usando campos de frontmatter em sua coleção](#usando-campos-de-frontmatter-em-sua-coleção)
+    - [Coleções com categorias e tags](#coleções-com-categorias-e-tags)
   - [Adicionando uma nova publicação](#adicionando-uma-nova-publicação)
     - [Anotação do autor](#anotação-do-autor)
     - [Botões (através de palavras-chave BibTeX personalizadas)](#botões-através-de-palavras-chave-bibtex-personalizadas)
@@ -301,11 +304,106 @@ Você pode adicionar notícias na página "Sobre" adicionando novos arquivos Mar
 
 Este tema Jekyll implementa [coleções](https://jekyllrb.com/docs/collections/) para que você possa dividir seu trabalho em categorias. O tema já vem com três coleções padrão: `news`, `projects` e `books`. Os itens da coleção `news` são exibidos automaticamente na página inicial, enquanto os itens da coleção `projects` são exibidos em uma grade responsiva na página de projetos e os itens da coleção `books` são exibidos em sua própria página de estante de livros dentro dos submenus.
 
-Você pode facilmente criar suas próprias coleções, como apps, contos, cursos ou qualquer outro trabalho criativo. Para isso, edite as coleções no arquivo [\_config.yml](_config.yml), crie uma pasta correspondente e crie uma página de destino para sua coleção, semelhante a [\_pages/LANG/projects.md](_pages/en-us/projects.md).
+Você pode facilmente criar suas próprias coleções para qualquer tipo de conteúdo—materiais de ensino, cursos, apps, contos ou o que se adequar às suas necessidades.
 
-Se desejar criar uma coleção com suporte para categorias e tags, como os posts do blog, basta adicionar essa coleção à seção `jekyll-archives` do arquivo [\_config.yml](_config.yml). Você pode ver como isso é feito com a coleção `books`. Para mais informações sobre como personalizar a seção de arquivos ou criar sua própria página de arquivos, consulte a [documentação do jekyll-archives-v2](https://george-gca.github.io/jekyll-archives-v2/).
+### Criando uma nova coleção
 
-Para acessar as coleções, você pode utilizar a variável `site.COLLECTION_NAME` em seus templates.
+Para criar uma nova coleção, siga estes passos. Vamos criar uma coleção `teaching`, mas você pode substituir `teaching` por qualquer nome que preferir:
+
+1. **Adicione a coleção ao `_config.yml`**
+
+   Abra a seção `collections` em [\_config.yml](_config.yml) e adicione sua nova coleção:
+
+   ```yaml
+   collections:
+     news:
+       defaults:
+         layout: post
+       output: true
+       permalink: /:collection/:title/
+     projects:
+       output: true
+       permalink: /:collection/:title/
+     teaching:
+       output: true
+       permalink: /:collection/:title/
+   ```
+
+   - `output: true` torna os itens da coleção acessíveis como páginas separadas
+   - `permalink: **deve ser definido** para evitar adicionar códigos de idioma no caminho da URL (veja o comentário em [\_config.yml](_config.yml)), o que quebraria a estrutura do template
+   - Para outras opções de permalink, veja a [documentação de permalinks do Jekyll](https://jekyllrb.com/docs/permalinks/#collections)
+
+2. **Crie pastas específicas de idioma para seus itens de coleção**
+
+   Este é um tema multilíngue, portanto você deve criar pastas específicas de idioma para sua coleção. Crie pastas no diretório raiz com um prefixo de sublinhado e código de idioma. Para uma coleção `teaching` com inglês e português, crie:
+
+   ```text
+   _teaching/
+   ├── en-us/
+   │   ├── course_1.md
+   │   ├── course_2.md
+   │   └── course_3.md
+   └── pt-br/
+       ├── course_1.md
+       ├── course_2.md
+       └── course_3.md
+   ```
+
+   > **Importante:** Você deve criar uma pasta para cada idioma definido na lista `languages` em [\_config.yml](_config.yml). Por exemplo, se você tiver `languages: ["en-us", "pt-br", "fr-ca"]`, deve criar as pastas `en-us/`, `pt-br/` e `fr-ca/`.
+
+3. **Crie páginas de entrada específicas de idioma para sua coleção**
+
+   Adicione arquivos Markdown nos diretórios `_pages/LANG/` (por exemplo, `_pages/en-us/teaching.md` e `_pages/pt-br/teaching.md`) que servirão como páginas principais para sua coleção em cada idioma. Você pode usar [\_pages/en-us/projects.md](_pages/en-us/projects.md) ou [\_pages/en-us/books.md](_pages/en-us/books.md) como modelo e adaptá-lo para suas necessidades.
+
+   Em sua página de entrada, acesse sua coleção usando a variável `site.COLLECTION_NAME`:
+
+   ```liquid
+   {% assign teaching_items = site.teaching | sort: 'date' | reverse %}
+
+   {% for item in teaching_items %}
+     <h3>{{ item.title }}</h3>
+     <p>{{ item.content }}</p>
+   {% endfor %}
+   ```
+
+   Substitua `COLLECTION_NAME` pelo nome real de sua coleção (por exemplo, `site.teaching`).
+
+4. **Adicione links para suas páginas de coleção**
+
+   Atualize [\_pages/LANG/dropdown.md](_pages/en-us/dropdown.md) em cada idioma para adicionar links de menu para sua nova página de coleção ou a configuração de navegação em [\_config.yml](_config.yml).
+
+5. **Crie itens de coleção específicos de idioma**
+
+   Adicione arquivos Markdown em cada pasta de idioma de sua coleção (por exemplo, `_teaching/en-us/` e `_teaching/pt-br/`) com frontmatter e conteúdo apropriados. Certifique-se de criar o conteúdo equivalente em todos os idiomas ativos.
+
+Para mais informações sobre coleções, consulte a [documentação oficial do Jekyll](https://jekyllrb.com/docs/collections/) e o [guia passo a passo](https://jekyllrb.com/docs/step-by-step/09-collections/).
+
+### Usando campos de frontmatter em sua coleção
+
+Ao criar itens em sua coleção, você pode definir campos de frontmatter personalizados e usá-los em sua página de destino. Por exemplo:
+
+```markdown
+---
+layout: page
+title: Introdução aos Métodos de Pesquisa
+importance: 1
+category: methods
+---
+
+Descrição e conteúdo do curso aqui...
+```
+
+Depois em seu modelo de página de destino:
+
+```liquid
+{% if item.category == 'methods' %}
+  <span class="badge">{{ item.category }}</span>
+{% endif %}
+```
+
+### Coleções com categorias e tags
+
+Se você desejar adicionar suporte a categorias e tags (como os posts de blog têm), você precisa configurar a seção `jekyll-archives` em [\_config.yml](_config.yml). Veja como isso é feito com a coleção `books` como referência. Para mais detalhes, consulte a [documentação do jekyll-archives-v2](https://george-gca.github.io/jekyll-archives-v2/).
 
 ## Adicionando uma nova publicação
 

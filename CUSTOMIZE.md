@@ -346,31 +346,40 @@ To create a new collection, follow these steps. We will create a `teaching` coll
        defaults:
          layout: post
        output: true
+       permalink: /:collection/:title/
      projects:
        output: true
+       permalink: /:collection/:title/
      teaching:
        output: true
-       permalink: /teaching/:path/
+       permalink: /:collection/:title/
    ```
 
    - `output: true` makes the collection items accessible as separate pages
-   - `permalink` defines the URL path for each collection item (`:path` is replaced with the filename)
-     - Note: You can customize the [permalink structure](https://jekyllrb.com/docs/permalinks/#collections) as needed. If not set, it uses `/COLLECTION_NAME/:name/`.
+   - `permalink: **must be set** to avoid adding language codes to the URL path (see the comment in [\_config.yml](_config.yml)), which would break the template structure
+   - For other permalink options, see the [Jekyll permalink documentation](https://jekyllrb.com/docs/permalinks/#collections)
 
-2. **Create a folder for your collection items**
+2. **Create language-specific folders for your collection items**
 
-   Create a new folder in the root directory with an underscore prefix, matching your collection name. For a `teaching` collection, create `_teaching/`:
+   This is a multilingual theme, so you must create language-specific folders for your collection. Create folders in the root directory with an underscore prefix and language code. For a `teaching` collection with English and Portuguese, create:
 
    ```text
    _teaching/
-   ├── course_1.md
-   ├── course_2.md
-   └── course_3.md
+   ├── en-us/
+   │   ├── course_1.md
+   │   ├── course_2.md
+   │   └── course_3.md
+   └── pt-br/
+       ├── course_1.md
+       ├── course_2.md
+       └── course_3.md
    ```
 
-3. **Create a landing page for your collection**
+   > **Important:** You must create one folder for each language defined in the `languages` list in [\_config.yml](_config.yml). For example, if you have `languages: ["en-us", "pt-br", "fr-ca"]`, you must create `en-us/`, `pt-br/`, and `fr-ca/` folders.
 
-   Add a Markdown file in `_pages/` (e.g., `teaching.md`) that will serve as the main page for your collection. You can use [\_pages/projects.md](_pages/projects.md) or [\_pages/books.md](_pages/books.md) as a template and adapt it for your needs.
+3. **Create language-specific landing pages for your collection**
+
+   Add Markdown files in `_pages/LANG/` directories (e.g., `_pages/en-us/teaching.md` and `_pages/pt-br/teaching.md`) that will serve as the main pages for your collection in each language. You can use [\_pages/en-us/projects.md](_pages/en-us/projects.md) or [\_pages/en-us/books.md](_pages/en-us/books.md) as a template and adapt it for your needs.
 
    In your landing page, access your collection using the `site.COLLECTION_NAME` variable:
 
@@ -385,13 +394,13 @@ To create a new collection, follow these steps. We will create a `teaching` coll
 
    Replace `COLLECTION_NAME` with your actual collection name (e.g., `site.teaching`).
 
-4. **Add a link to your collection page**
+4. **Add links to your collection pages**
 
-   Update [\_pages/dropdown.md](_pages/dropdown.md) or the navigation configuration in [\_config.yml](_config.yml) to add a menu link to your new page.
+   Update [\_pages/LANG/dropdown.md](_pages/en-us/dropdown.md) in each language to add menu links to your new collection page or the navigation configuration in [\_config.yml](_config.yml).
 
-5. **Create collection items**
+5. **Create language-specific collection items**
 
-   Add Markdown files in your new collection folder (e.g., `_teaching/`) with appropriate frontmatter and content.
+   Add Markdown files in each language folder of your collection (e.g., `_teaching/en-us/` and `_teaching/pt-br/`) with appropriate frontmatter and content. Make sure to create the equivalent content in all active languages.
 
 For more information regarding collections, check [Jekyll official documentation](https://jekyllrb.com/docs/collections/) and [step-by=step guide](https://jekyllrb.com/docs/step-by-step/09-collections/).
 
