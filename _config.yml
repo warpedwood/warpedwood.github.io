@@ -163,6 +163,9 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - _pages/en/cv.md
+  - _pages/fr/cv.md
+  - _pages/es/cv.md
   - bin/
   - CONTRIBUTING.md
   - CONTRIBUTING.pt-br.md
