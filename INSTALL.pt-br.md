@@ -243,7 +243,7 @@ Se você instalou o **multi-language-al-folio** conforme descrito acima, pode at
 # Assumindo que o diretório atual é <nome-do-seu-repositório>
 $ git remote add upstream https://github.com/george-gca/multi-language-al-folio.git
 $ git fetch upstream
-$ git rebase v1.14.5
+$ git rebase v1.15.1
 ```
 
 Se você personalizou extensivamente uma versão anterior, pode ser mais complicado atualizar.
