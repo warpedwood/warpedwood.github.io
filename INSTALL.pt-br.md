@@ -17,6 +17,9 @@
     - [Implantar no Netlify](#implantar-no-netlify)
     - [Implantação em outro servidor de hospedagem (que não seja o GitHub Pages)](#implantação-em-outro-servidor-de-hospedagem-que-não-seja-o-github-pages)
     - [Implantação em um repositório separado (somente para usuários avançados)](#implantação-em-um-repositório-separado-somente-para-usuários-avançados)
+  - [Mantendo Dependências](#mantendo-dependências)
+    - [Atualizando o bundler](#atualizando-o-bundler)
+    - [Atualizando todas as dependências](#atualizando-todas-as-dependências)
   - [Atualizando de uma versão anterior](#atualizando-de-uma-versão-anterior)
 
 # Instalando e Implantando
@@ -234,6 +237,33 @@ Se `$HOME/repo/publishing-source` contiver arquivos que você deseja que o jekyl
 Na configuração padrão, o multi-language-al-folio copiará o `README.md` do nível superior para a fonte de publicação. Se você quiser alterar esse comportamento, adicione `README.md` em `exclude` no `_config.yml`.
 
 **Nota:** _Não_ execute `jekyll clean` no repositório da fonte de publicação, pois isso resultará na exclusão de todo o diretório, independentemente do conteúdo de `keep_files` no `_config.yml`.
+
+## Mantendo Dependências
+
+O **al-folio** usa o **Bundler** (um gerenciador de dependências do Ruby) para acompanhar todos os pacotes Ruby (chamados de "gems") necessários para executar o Jekyll e seus plugins. Com o tempo, esses pacotes podem receber atualizações que incluem correções de bugs, patches de segurança e novos recursos.
+
+### Atualizando o bundler
+
+A ferramenta bundler em si deve ser mantida atualizada. Para atualizar o bundler para a versão mais recente, execute:
+
+```bash
+$ bundle update --bundler
+```
+
+### Atualizando todas as dependências
+
+Para atualizar todos os gems do Ruby para suas versões compatíveis mais recentes (conforme especificado em seu `Gemfile`), execute:
+
+```bash
+$ bundle update --all
+```
+
+Após atualizar as dependências, teste seu site localmente para garantir que tudo ainda funciona corretamente:
+
+- Se usar Docker: `docker compose up`
+- Se usar configuração local: `bundle exec jekyll serve`
+
+> **Nota:** As atualizações de dependências podem ocasionalmente introduzir mudanças que quebram a compatibilidade. Se seu site falhar após a atualização, consulte o [FAQ](FAQ.md) para solução de problemas, ou reverta para a versão anterior com `bundle lock --add-platform ruby` e `git checkout Gemfile.lock`.
 
 ## Atualizando de uma versão anterior
 
