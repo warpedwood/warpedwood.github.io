@@ -27,13 +27,18 @@ repo_trophies:
   theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
   theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 
+# External service URLs for repository page
+# To use a different instance or service for displaying GitHub stats and trophies,
+# update these URLs. These are used in the repository templates.
+external_services:
+  github_readme_stats_url: https://github-readme-stats.vercel.app
+  github_profile_trophy_url: https://github-profile-trophy.vercel.app
+
 # -----------------------------------------------------------------------------
 # RSS Feed
 # -----------------------------------------------------------------------------
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
-
-rss_icon: true
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -102,7 +107,8 @@ giscus:
   strict: 1 # use strict identification mode
   reactions_enabled: 1 # enable (1) or disable (0) emoji reactions
   input_position: bottom # whether to display input form below (bottom) or above (top) the comments
-  theme: preferred_color_scheme # name of the color scheme (preferred works well with al-folio light/dark mode)
+  dark_theme: dark # name of the dark color scheme (preferred works well with al-folio dark mode)
+  light_theme: light # name of the light color scheme (preferred works well with al-folio light mode)
   emit_metadata: 0
 
 # Disqus comments (DEPRECATED)
@@ -112,6 +118,7 @@ disqus_shortname: multi-language-al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
+<<<<<<< HEAD
 # external_sources:
 #   - name: medium.com
 #     rss_url: https://medium.com/@al-folio/feed
@@ -119,6 +126,20 @@ disqus_shortname: multi-language-al-folio # put your disqus shortname
 #     posts:
 #       - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
 #         published_date: 2024-05-14
+=======
+# Optional: Set default categories and tags for posts from each source.
+external_sources:
+  - name: medium.com
+    rss_url: https://medium.com/@al-folio/feed
+    categories: [external-posts]
+    tags: [medium]
+  - name: Google Blog
+    posts:
+      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
+        published_date: 2024-05-14
+    categories: [external-posts]
+    tags: [google]
+>>>>>>> upstream/main
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -136,12 +157,18 @@ newsletter:
 collections:
   books:
     output: true
+    # this is needed to avoid adding language here, like /:collection/:lang/:title/
+    permalink: /:collection/:title/
   news:
     defaults:
       layout: post
     output: true
+    # this is needed to avoid adding language here, like /:collection/:lang/:title/
+    permalink: /:collection/:title/
   projects:
     output: true
+    # this is needed to avoid adding language here, like /:collection/:lang/:title/
+    permalink: /:collection/:title/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -198,7 +225,9 @@ keep_files:
 
 # Plug-ins
 plugins:
+  - jekyll-3rd-party-libraries
   - jekyll-archives-v2
+  - jekyll-cache-bust
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
@@ -211,6 +240,7 @@ plugins:
   - jekyll-regex-replace
   - jekyll/scholar
   - jekyll-sitemap
+  - jekyll-socials
   - jekyll-tabs
   - jekyll-toc
   - jekyll-twitter-plugin
@@ -311,10 +341,14 @@ filtered_bibtex_keywords:
     bibtex_show,
     blog,
     code,
+    dimensions,
+    eprint,
     google_scholar_id,
+    hal,
     html,
     inspirehep_id,
     pdf,
+    pmid,
     poster,
     preview,
     selected,
@@ -374,7 +408,7 @@ imagemagick:
     - ".tiff"
     - ".gif"
   output_formats:
-    webp: "-quality 85"
+    webp: "-auto-orient -quality 85"
 
 # Lazy loading images
 #   If you enable lazy loading, all images will add the loading="lazy" attribute.
