@@ -22,15 +22,12 @@ If your question is related to localization, please check if it was not already 
   - [How can I update Font Awesome version on the template](#how-can-i-update-font-awesome-version-on-the-template)
   - [How can I update Tabler Icons version on the template](#how-can-i-update-tabler-icons-version-on-the-template)
   - [What do all these GitHub actions/workflows mean?](#what-do-all-these-github-actionsworkflows-mean)
-<<<<<<< HEAD
-=======
   - [How can I use Google Search Console ID on the template?](#how-can-i-use-google-search-console-id-on-the-template)
   - [What are Code Wiki and DeepWiki?](#what-are-code-wiki-and-deepwiki)
     - [When to use these tools](#when-to-use-these-tools)
     - [What they do](#what-they-do)
     - [Limitations](#limitations)
     - [Access these tools](#access-these-tools)
->>>>>>> upstream/main
 
 <!--te-->
 
