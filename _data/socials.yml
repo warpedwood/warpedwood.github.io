@@ -4,14 +4,14 @@
 
 email: pablo.barnierkhawam@sciencespo.fr
 work_url: https://www.sciencespo.fr/ceri/fr/users/pablobarnierkhawam.html
-hal_username: pablo-barnier-khawam
+hal_id: pablo-barnier-khawam
 orcid_id: 0000-0002-7462-5551
 scholar_userid: rlHuDUoAAAAJ
 zotero_username: pablobarnierkhawam
 linkedin_username: pablo-barnier-khawam-049990306
 bluesky_url: https://bsky.app/profile/pablobarnierkhawam.fr
 mastodon_username: mamot.fr/@warped_wood
-# github_username: warpedwood
+# # github_username: warpedwood
 # rss_icon: true # set to true to show the RSS icon
 # acm_id: # your dl.acm.org/profile/id
 # arxiv_id: # your arXiv author ID
@@ -21,7 +21,6 @@ mastodon_username: mamot.fr/@warped_wood
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
 # gitlab_username: # your GitLab user name
-# hal_id: # your HAL id (https://hal.science/)
 # ieee_id: # your ieeexplore.ieee.org/author/id
 # inspirehep_id: 1010907 # Inspire HEP author ID
 # instagram_id: # your instagram id
