@@ -11,7 +11,7 @@ zotero_username: pablobarnierkhawam
 linkedin_username: pablo-barnier-khawam-049990306
 bluesky_url: https://bsky.app/profile/pablobarnierkhawam.fr
 mastodon_username: mamot.fr/@warped_wood
-# # github_username: warpedwood
+# github_username:
 # rss_icon: true # set to true to show the RSS icon
 # acm_id: # your dl.acm.org/profile/id
 # arxiv_id: # your arXiv author ID
@@ -22,7 +22,7 @@ mastodon_username: mamot.fr/@warped_wood
 # flickr_id: # your flickr id
 # gitlab_username: # your GitLab user name
 # ieee_id: # your ieeexplore.ieee.org/author/id
-# inspirehep_id: 1010907 # Inspire HEP author ID
+# inspirehep_id: # Inspire HEP author ID
 # instagram_id: # your instagram id
 # kaggle_id: # your kaggle id
 # keybase_username: # your keybase user name
@@ -49,6 +49,6 @@ mastodon_username: mamot.fr/@warped_wood
 # x_username: # your X handle
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # custom_social: # can be any name here other than the ones already defined above
-  # logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
-  # title: Custom Social
-  # url: https://www.alberteinstein.com/
+#   logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
+#   title: Custom Social
+#   url: https://www.alberteinstein.com/
