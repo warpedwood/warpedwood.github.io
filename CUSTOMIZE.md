@@ -785,8 +785,6 @@ GitHub restricts the default `GITHUB_TOKEN` from triggering other workflows when
 
 ### How to set up the PAT
 
-<!-- token: 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 -->
-
 1. **Create a Personal Access Token**
    - Go to [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens).
    - Click "Generate new token" (classic or fine-grained).
