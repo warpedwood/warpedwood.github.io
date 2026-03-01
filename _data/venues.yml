@@ -1,10 +1,3 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
 "Vision":
   color: "#009f36"
 
@@ -41,7 +34,7 @@
 "Conférence":
   url: https://conference.sciencespo.fr/
 
-"La Vie des idées":
+"Vie des idées":
   url: https://laviedesidees.fr/
 
 "Participations":
