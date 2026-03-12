@@ -9,5 +9,4 @@ tags:
 tabs: true
 ---
 
-Contribution à l'article de François Bougon publié dans *Mediapart* et disponible au
-lien suivant : <https://www.mediapart.fr/journal/international/131225/au-chili-avant-le-second-tour-de-la-presidentielle-la-gauche-veut-croire-au-miracle>
+Contribution à l'article de François Bougon publié dans *Mediapart* et disponible au lien suivant : <https://www.mediapart.fr/journal/international/131225/au-chili-avant-le-second-tour-de-la-presidentielle-la-gauche-veut-croire-au-miracle>
