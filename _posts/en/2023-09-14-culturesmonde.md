@@ -5,7 +5,7 @@ date: 2023-09-14
 tags:
   - Chile
   - Mapuche
-  - Indigenous Peoples
+  - Indigenous peoples
 tabs: true
 ---
 

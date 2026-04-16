@@ -5,7 +5,7 @@ date: 2025-12-13
 tags:
   - Chile
   - Elections
-  - Far Right
+  - Far right
 tabs: true
 ---
 
