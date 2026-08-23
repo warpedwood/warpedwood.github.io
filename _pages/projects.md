@@ -4,7 +4,7 @@ layout: page
 title: research
 permalink: /projects/
 description:
-nav: false
+nav: true
 nav_order: 2
 display_categories:
 horizontal: false
