@@ -8,9 +8,12 @@ nav: true
 nav_order: 3
 ---
 
-I have taught undergraduate courses mainly in political science and
-international relations, in English, French and Spanish. I also served as a teaching
-assistant for courses in international security and democratic theory.
+I have taught undergraduate courses mainly in political science and international relations, in English, French and Spanish. I also served as a teaching assistant for courses in international security and democratic theory.
+
+---
+
+J'ai enseigné des TD, principalement en science politique et en relations internationales, en anglais, en français et en espagnol. J'ai également été *teaching assistant* pour des cours de sécurité internationale et de théorie démocratique.
+
 
 ## Institut catholique de Paris
 
