@@ -10,7 +10,9 @@ scholar_userid: rlHuDUoAAAAJ
 linkedin_username: pablo-barnier-khawam-049990306
 bluesky_url: https://bsky.app/profile/pablobarnierkhawam.fr
 mastodon_username: mamot.fr/@warped_wood
-zotero_username: pablobarnierkhawam
+zotero_username:
+  value: pablobarnierkhawam # https://www.zotero.org/pablobarnierkhawam
+  logo: ai ai-zotero # Font Awesome has no Zotero icon; use the Academicons one
 # github_username:
 # rss_icon: true # set to true to show the RSS icon
 # acm_id: # your dl.acm.org/profile/id
