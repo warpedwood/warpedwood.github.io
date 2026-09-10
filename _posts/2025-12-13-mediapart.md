@@ -2,6 +2,7 @@
 layout: post
 title: 'Au Chili, avant le second tour de la présidentielle, la gauche veut croire au miracle'
 date: 2025-12-13
+categories: press
 tags:
   - Chile
   - Elections

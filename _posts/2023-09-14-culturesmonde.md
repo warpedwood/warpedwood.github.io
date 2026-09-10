@@ -2,6 +2,7 @@
 layout: post
 title: 'Série «&nbsp;Chili, les fractures d’une nation&nbsp;». Épisode 4/4 : Mapuches : l’échec de la réconciliation ?'
 date: 2023-09-14
+categories: press
 tags:
   - Chile
   - Mapuche

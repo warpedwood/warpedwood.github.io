@@ -2,6 +2,7 @@
 layout: post
 title: "Quand la Bolivie s'enflamme : derrière «&nbsp;le capitalisme pour tous&nbsp;», la crise pour certains"
 date: 2026-05-27
+categories: press
 tags:
   - Bolivia
   - Elections

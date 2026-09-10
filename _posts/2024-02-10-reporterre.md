@@ -2,6 +2,7 @@
 layout: post
 title: 'Au Chili, la terrible répression des indigènes en lutte contre l’industrie forestière'
 date: 2024-02-10
+categories: press
 tags:
   - Chile
   - Mapuche

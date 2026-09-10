@@ -15,4 +15,8 @@ nav_order: 1
 
 {% bibliography -f papers --group_by type,year %}
 
+<h2 class="bibliography">Book Reviews</h2>
+
+{% bibliography -f reviews --group_by none %}
+
 </div>

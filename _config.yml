@@ -229,6 +229,9 @@ kramdown:
 include: ["_pages"]
 exclude:
   - AGENTS.md
+  - .agents/
+  - .claude/
+  - .codex/
   - al-folio-upgrade-report.md
   - bin/
   - CLAUDE.md
@@ -347,7 +350,7 @@ jekyll-archives:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_categories: ["external-services", "press"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -359,6 +362,10 @@ scholar:
 
   style: apa
   locale: en
+
+  type_names:
+    misc: "Popular Science"
+    thesis: "Thesis"
 
   source: /_bibliography/
   bibliography: papers.bib
