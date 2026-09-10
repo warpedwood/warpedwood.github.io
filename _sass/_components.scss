@@ -287,3 +287,17 @@ ul.task-list input[type="checkbox"] {
 .d2h-diff-table {
   position: relative;
 }
+
+// Back-to-top button: lift above the fixed footer (z-index 1030).
+// `:root #back-to-top` matches the gem's light-theme specificity so this wins.
+:root #back-to-top {
+  bottom: 50px;
+  z-index: 1031;
+}
+
+// Center the arrow: the library's injected CSS assumes a 56px button and uses
+// a 16px top margin for its 24px svg, which overflows a 40px circle. Use the
+// 8px margin that centers 24px in 40px, with higher specificity to win.
+:root #back-to-top svg {
+  margin: 8px auto 0;
+}
