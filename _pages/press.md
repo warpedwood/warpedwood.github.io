@@ -1,38 +1,15 @@
 ---
-page_id: blog
 layout: default
-permalink: /blog/
-title: blog
-blog_name:
+permalink: /press/
+title: press
 description:
 nav: true
-nav_order: 4
-pagination:
-  enabled: false
-  collection: posts
-  permalink: /page/:num/
-  per_page: 5
-  sort_field: date
-  sort_reverse: true
-  trail:
-    before: 1 # The number of links before the current page
-    after: 3 # The number of links after the current page
+nav_order: 5
 ---
 
 <div class="post">
 
-{% assign blog_name_size = site.blog_name | size %}
-{% assign blog_description_size = site.blog_description | size %}
-
-{% if blog_name_size > 0 or blog_description_size > 0 %}
-
-  <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
-    <h2>{{ site.blog_description }}</h2>
-  </div>
-  {% endif %}
-
-{% assign featured_posts = site.posts | where: "featured", "true" | where_exp: "p", "p.categories.size == 0" %}
+{% assign featured_posts = site.posts | where: "featured", "true" | where_exp: "p", "p.categories contains 'press'" %}
 {% if featured_posts.size > 0 %}
 <br>
 
@@ -61,7 +38,7 @@ pagination:
 
                     <p class="post-meta">
                       {{ read_time }} min read &nbsp; &middot; &nbsp;
-                      <a href="{{ year | prepend: '/blog/' | relative_url }}">
+                      <a href="{{ year | prepend: '/press/' | relative_url }}">
                         <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
                     </p>
                   </div>
@@ -79,11 +56,7 @@ pagination:
 
   <ul class="post-list">
 
-    {% if page.pagination.enabled %}
-      {% assign postlist = paginator.posts %}
-    {% else %}
-      {% assign postlist = site.posts | where_exp: "p", "p.categories.size == 0" %}
-    {% endif %}
+    {% assign postlist = site.posts | where_exp: "p", "p.categories contains 'press'" | sort: "date" | reverse %}
 
     {% for post in postlist %}
 
@@ -124,13 +97,13 @@ pagination:
         {% endif %}
       </p>
       <p class="post-tags">
-        <a href="{{ year | prepend: '/blog/' | relative_url }}">
+        <a href="{{ year | prepend: '/press/' | relative_url }}">
           <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
 
           {% if tags != "" %}
           &nbsp; &middot; &nbsp;
             {% for tag in post.tags %}
-            <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">
+            <a href="{{ tag | slugify | prepend: '/press/tag/' | relative_url }}">
               <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
               {% unless forloop.last %}
                 &nbsp;
@@ -141,7 +114,7 @@ pagination:
           {% if categories != "" %}
           &nbsp; &middot; &nbsp;
             {% for category in post.categories %}
-            <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">
+            <a href="{{ category | slugify | prepend: '/press/category/' | relative_url }}">
               <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
               {% unless forloop.last %}
                 &nbsp;
